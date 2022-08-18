@@ -5,13 +5,11 @@ import {
   CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
-  CDBSidebarSubMenu,
+  CDBBadge,
   CDBSidebarMenuItem,
 } from 'cdbreact';
 import { NavLink } from 'react-router-dom';
 import "../../App.css"
-import image from "../Images/starboy.png"
-
 
 const Sidebar = () => {
   return (
@@ -28,14 +26,14 @@ const Sidebar = () => {
             <NavLink exact to="/dashboard" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/tables" activeClassName="activeClicked" >
+            <NavLink exact to="/userlists" activeClassName="activeClicked" >
               <CDBSidebarMenuItem icon="table">List of Users</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="clock">Schedule/Program</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book">Chats <span class="badge text-bg-danger">7</span></CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="book" suffix={<CDBBadge color='danger' borderType="pill"><span style={{color: "#fff", fontWeight: "bold"}}>7</span></CDBBadge>}>Chats</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="pen">Registrations</CDBSidebarMenuItem>

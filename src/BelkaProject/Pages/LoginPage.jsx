@@ -39,13 +39,14 @@ export default function LoginPage() {
             <br />
 
             <center>
-              <button
-                type="button"
-                className="btn btn-success"
-                style={{ width: "60%" }}
-              >
-                SIGN UP
-              </button>
+              <Link to="/dashboard" style={{textDecoration:"none"}}><button
+              
+              type="button"
+              className="btn btn-success"
+              style={{ width: "60%" }}
+            >
+              SIGN UP
+            </button></Link>
               <center style={{width: "65%"}}>
               <div class="d-flex mb-3">
                 <div class="me-auto p-2">
