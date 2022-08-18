@@ -1,0 +1,67 @@
+import React from 'react';
+import {
+  CDBSidebar,
+  CDBSidebarContent,
+  CDBSidebarFooter,
+  CDBSidebarHeader,
+  CDBSidebarMenu,
+  CDBSidebarSubMenu,
+  CDBSidebarMenuItem,
+} from 'cdbreact';
+import { NavLink } from 'react-router-dom';
+import "../../App.css"
+import image from "../Images/starboy.png"
+
+
+const Sidebar = () => {
+  return (
+    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial', position:"absolute",}}>
+      <CDBSidebar textColor="#333" backgroundColor="#ffff">
+        <CDBSidebarHeader prefix={<i style={{color: "#028B2E"}} className="fa fa-bars fa-large"></i>}>
+          <a href="/" className="text-decoration-none" style={{ color:  "#028B2E" , fontWeight: "bold", fontSize: "120%"}}>
+          BELKA Admin
+          </a>
+        </CDBSidebarHeader>
+
+        <CDBSidebarContent className="sidebar-content" style={{marginRight: "25%"}}>
+          <CDBSidebarMenu>
+            <NavLink exact to="/dashboard" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/tables" activeClassName="activeClicked" >
+              <CDBSidebarMenuItem icon="table">List of Users</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/profile" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="clock">Schedule/Program</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/analytics" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="book">Chats <span class="badge text-bg-danger">7</span></CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/analytics" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="pen">Registrations</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/analytics" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="file">File Manager</CDBSidebarMenuItem>
+            </NavLink>
+          </CDBSidebarMenu>
+
+          <CDBSidebarMenu>
+            <CDBSidebarMenuItem icon="user"></CDBSidebarMenuItem>
+          </CDBSidebarMenu>
+        </CDBSidebarContent>
+
+        <CDBSidebarFooter>
+          <div
+            style={{
+              padding: '20px 5px',
+            }}
+          >
+            <CDBSidebarMenuItem style={{color: "red"}} icon="wrench">Logout</CDBSidebarMenuItem>
+          </div>
+        </CDBSidebarFooter>
+      </CDBSidebar>
+    </div>
+  );
+};
+
+export default Sidebar;
