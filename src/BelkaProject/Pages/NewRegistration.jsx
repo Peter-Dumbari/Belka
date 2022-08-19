@@ -1,5 +1,7 @@
 import React from 'react'
 import star from '../Images/starboy.png'
+import { CDBContainer, CDBIcon } from "cdbreact";
+
 
 export const NewRegistration = () => {
   return (
@@ -33,14 +35,16 @@ export const NewRegistration = () => {
         </div>
         <div className="col-11 col-md-4 cols-md-12 bg-light m-3" style={{borderRadius: "15px"}}>
         <h5 style={{fontFamily: 'Poppins'}}>Top Programmes</h5>
-           <div className='d-inline-flex p-2' style={{borderBottom: '1px solid',marginLeft: "25px"}}>
+           <div className='d-inline-flex p-2' style={{borderBottom: '1px solid',marginLeft: "25px", width: "85%"}}>
            <span className=''>
                 <img src={star} alt="" width="50px" style={{marginRight: "20px"}}/>
             </span>
             <div className="row">
                 <span style={{marginBottom: "-5px"}}>Summer Camp</span>
                 <span className='d-inline-flex p-2' style={{color: "green", fontSize: "10px", marginTop: "-6px", marginLeft: "3px"}}>
-                <i class="fa-solid fa-star"></i>
+                <CDBContainer>
+                <CDBIcon fab icon="orange" />
+                </CDBContainer>
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-regular fa-star"></i>
                 <i class="fa-regular fa-star"></i>

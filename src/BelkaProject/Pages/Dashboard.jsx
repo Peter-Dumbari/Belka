@@ -6,11 +6,11 @@ import { NewRegistration } from "./NewRegistration";
 
 export default function Dashboard() {
   return (
-    <body style={{backgroundColor: "#f1f1f2"}}>
+    <body style={{backgroundColor: "#f1f1f2",height: '100vh'}}>
       <Sidebar />
-      <div style={{ paddingLeft: "7%" }} className="container-fluid">
+      <div  className="container-fluid">
         <div className="col">
-          <div className="d-flex mb-3">
+          <div className="d-flex " style={{marginBottom: "2%"}}>
             <div className="me-auto p-2">
               <h3 style={{fontFamily: 'Poppins'}}>Dashboard</h3>
             </div>
