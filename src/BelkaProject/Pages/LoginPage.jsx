@@ -31,7 +31,7 @@ export default function LoginPage() {
               />
               <CDBInput
                 placeholder="Enter Password"
-                icon={<i class="fa-solid fa-key"></i>}
+                icon="grid"
               />
             </CDBContainer>
             <br />
