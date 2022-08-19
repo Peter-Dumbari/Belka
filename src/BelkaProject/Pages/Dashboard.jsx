@@ -6,7 +6,7 @@ import { NewRegistration } from "./NewRegistration";
 
 export default function Dashboard() {
   return (
-    <body style={{backgroundColor: "#f1f1f2",height: '100vh'}}>
+    <body style={{backgroundColor: "#f1f1f2"}}>
       <Sidebar />
       <div  className="container-fluid">
         <div className="col">
