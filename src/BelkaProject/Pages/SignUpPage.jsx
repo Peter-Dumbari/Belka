@@ -4,7 +4,7 @@ import facebooklogo from '../Images/facebooklogo.png';
 import googlelogo from '../Images/googlelogo.png';
 import star from '../Images/starboy.png'
 import {Link} from 'react-router-dom'
-import { CDBInput, CDBContainer } from 'cdbreact';
+import { CDBInput, CDBContainer,CDBIcon } from 'cdbreact';
 
 export default function SignUpPage() {
   return (
@@ -21,10 +21,10 @@ export default function SignUpPage() {
             <div style={{ width: "80%" }}>
 
             <CDBContainer>
-      <CDBInput placeholder="Fullname" icon={<i class="fa-solid fa-user"></i>} />
-      <CDBInput placeholder="Email" type="email" icon={<i class="fa-solid fa-envelope"></i>} />
-      <CDBInput placeholder="Password" type="password" icon={<i class="fa-solid fa-key"></i>} />
-      <CDBInput placeholder="Confirm Password" type="password" icon={<i class="fa-solid fa-key"></i>} />
+      <CDBInput placeholder="Fullname"icon={<CDBIcon icon="user" />} />
+      <CDBInput placeholder="Email" type="email" icon={<CDBIcon icon="envelope" />} />
+      <CDBInput placeholder="Password" type="password" icon={<CDBIcon icon="key" />} />
+      <CDBInput placeholder="Confirm Password" type="password" icon={<CDBIcon icon="key" />} />
     </CDBContainer>
               
               <br />

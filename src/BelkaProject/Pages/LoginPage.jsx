@@ -4,7 +4,7 @@ import googlelogo from "../Images/googlelogo.png";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
 import LoginImage from "../Images/Illustration.png";
-import { CDBInput, CDBContainer } from "cdbreact";
+import { CDBInput, CDBContainer, CDBIcon } from "cdbreact";
 import "./Login.css";
 
 export default function LoginPage() {
@@ -27,11 +27,11 @@ export default function LoginPage() {
             <CDBContainer>
               <CDBInput
                 placeholder="Enter Your E-mail"
-                icon={<i class="fa-solid fa-envelope"></i>}
+                icon={<CDBIcon icon="envelope" />}
               />
               <CDBInput
                 placeholder="Enter Password"
-                icon="grid"
+                icon={<CDBIcon icon="key" />}
               />
             </CDBContainer>
             <br />

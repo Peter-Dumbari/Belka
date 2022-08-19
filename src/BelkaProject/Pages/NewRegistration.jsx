@@ -1,7 +1,6 @@
 import React from 'react'
 import star from '../Images/starboy.png'
-import { CDBContainer, CDBIcon } from "cdbreact";
-
+import {  CDBIcon } from "cdbreact";
 
 export const NewRegistration = () => {
   return (
@@ -42,10 +41,10 @@ export const NewRegistration = () => {
             <div className="row">
                 <span style={{marginBottom: "-5px"}}>Summer Camp</span>
                 <span className='d-inline-flex p-2' style={{color: "green", fontSize: "10px", marginTop: "-6px", marginLeft: "3px"}}>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />}                
                 </span>
                 <span style={{marginTop: "-10px"}}>200+</span>
             </div>
@@ -57,10 +56,10 @@ export const NewRegistration = () => {
             <div className="row">
                 <span style={{marginBottom: "-5px"}}>Summer Camp</span>
                 <span className='d-inline-flex p-2' style={{color: "green", fontSize: "10px", marginTop: "-6px", marginLeft:"3px"}}>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
-                <img src="https://th.bing.com/th/id/R.132f9333158c629f6a91674241da14ce?rik=LNerrrK0m3iDWA&pid=ImgRaw&r=0&sres=1&sresct=1" alt="" width="15px"/>
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />}                
+                {<CDBIcon icon="star" />} 
                 </span>
                 <span style={{marginTop: "-10px"}}>200+</span>
             </div>

@@ -32,6 +32,13 @@ input {
   background-color: #028b2e0d;
 }
 
+.hi {
+  border-radius: 30px;
+  box-shadow: 0px 10px 20px 0px #1111111a;
+  ;
+
+}
+
 @media screen and (min-width:  975px){
   .container-fluid{
     padding-left: 7%;
