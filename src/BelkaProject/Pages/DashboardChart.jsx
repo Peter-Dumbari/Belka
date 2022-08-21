@@ -30,10 +30,10 @@ export default function DashboardChart() {
     labels: ['10am', '11am', '12am', '1am', '2am', '3am', '4am', '5am', '6am', '7am'],
     datasets: [
       {
-        label: 'My Second dataset',
+        label: 'My  dataset',
         backgroundColor: 'rgba(71, 225, 167, 0.5)',
         borderColor: 'rgb(71, 225, 167)',
-        data: [0, 2, 4, 8, 10, 12, 14, 16, 18, 20],
+        data: [0, 2, 4, 8, 10, 12, 14, 16, 18, 20]
       },
     ],
   });

@@ -33,7 +33,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="clock">Schedule/Program</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="book" suffix={<CDBBadge color='danger' borderType="pill"><span style={{color: "#fff", fontWeight: "bold"}}>7</span></CDBBadge>}>Chats</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="comment" suffix={<CDBBadge color='danger' borderType="pill"><span style={{color: "#fff", fontWeight: "bold"}}>7</span></CDBBadge>}>Chats</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="pen">Registrations</CDBSidebarMenuItem>
