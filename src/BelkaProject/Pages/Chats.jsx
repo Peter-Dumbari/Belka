@@ -4,25 +4,32 @@ import { CDBIcon, CDBInput, CDBContainer } from "cdbreact";
 
 export default function Chats() {
   function CallChart() {
-    return <div style={{position: "inherit"}}>
-      <div className="d-flex mb-3">
+    return (
+      <div className="sticky-bottom">
+        <div className="d-flex mb-3">
           <div className="me-auto p-2">
-            <span className="btn btn-outline position-relative" style={{color: "#484848"}}>
-              <CDBIcon icon="phone" style={{rotate: "90deg"}}/>
+            <span
+              className="btn btn-outline position-relative"
+              style={{ color: "#484848" }}
+            >
+              <CDBIcon icon="phone" style={{ rotate: "90deg" }} />
               <span>Calls</span>
-              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">7</span>
+              <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                7
+              </span>
             </span>
           </div>
-          <div className="p-2" >
-          <button type="button" class="btn btn-outline position-relative">
-  <CDBIcon icon="comment"/> Chat
-  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-    7
-  </span>
-</button>
+          <div className="p-2">
+            <button type="button" class="btn btn-outline position-relative">
+              <CDBIcon icon="comment" /> Chat
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                7
+              </span>
+            </button>
           </div>
         </div>
-    </div>;
+      </div>
+    );
   }
 
   function FillExample() {
@@ -121,8 +128,11 @@ export default function Chats() {
                           alt=""
                           width="30px"
                           className="position-relative"
-                          style={{ borderRadius: "10px", marginTop: "7px", backgroundColor: "purple" 
-                        }}
+                          style={{
+                            borderRadius: "10px",
+                            marginTop: "7px",
+                            backgroundColor: "purple",
+                          }}
                         />
                       </div>
                       <div className="col-10">
@@ -176,7 +186,7 @@ export default function Chats() {
       >
         <h4 style={{ fontWeight: "bold" }}>Chats</h4>
         <div className="row">
-          <div className="col-11 col-md-4 mb-3" style={{marginLeft: "20px" }}>
+          <div className="col-11 col-md-4 mb-3" style={{ marginLeft: "20px" }}>
             <div className="row">
               <div
                 className="p-4"
@@ -197,16 +207,17 @@ export default function Chats() {
 
                 <FillExample />
               </div>
-              <div style={{
+              <div
+                style={{
                   backgroundColor: "rgb(245, 245, 245)",
                   marginLeft: "0px",
-                  marginTop: "10px"
-                }}>
-                <CallChart/>
+                  marginTop: "10px",
+                }}
+              >
+                <CallChart />
               </div>
             </div>
-            <div>
-            </div>
+            <div></div>
           </div>
           <div
             className="col-11 col-md-7 mb-3"
@@ -227,32 +238,69 @@ export default function Chats() {
                           alt=""
                           width="30px"
                           className="position-relative"
-                          style={{ borderRadius: "10px", marginTop: "7px", backgroundColor: "purple" 
-                        }}
+                          style={{
+                            borderRadius: "10px",
+                            marginTop: "7px",
+                            backgroundColor: "purple",
+                          }}
                         />
                       </div>
                       <div className="col-10">
                         <span className="row">
-                          <span style={{ fontWeight: "500" }}>
-                            Joan Baby
-                          </span>
-                          <span style={{ fontSize: "80%" }}>
-                            Online
-                          </span>
+                          <span style={{ fontWeight: "500" }}>Joan Baby</span>
+                          <span style={{ fontSize: "80%" }}>Online</span>
                         </span>
                       </div>
+                    </div>
                   </div>
                 </div>
-                </div>
               </div>
-              <div className="p-2">
-                <div className="d-inline-flex">
-                  <CDBIcon icon="phone" />
-                  <CDBIcon icon="envelope" />
-                  <CDBIcon icon="book" />
+              <div className="p-2" style={{ width: "30%" }}>
+                <div className="d-inline-flex" style={{ cursor: "pointer" }}>
+                  <CDBIcon
+                    icon="phone"
+                    style={{
+                      rotate: "90deg",
+                      backgroundColor: "#F7F7F8",
+                      padding: "10px",
+                      marginRight: "20px",
+                      borderRadius: "20px",
+                    }}
+                  />
+                  <CDBIcon
+                    icon="video"
+                    style={{
+                      backgroundColor: "#F7F7F8",
+                      padding: "10px",
+                      marginRight: "20px",
+                      borderRadius: "20px",
+                    }}
+                  />
+                  <CDBIcon
+                    icon="ellipsis-h"
+                    style={{
+                      rotate: "90deg",
+                      backgroundColor: "#F7F7F8",
+                      padding: "10px",
+                      borderRadius: "20px",
+                    }}
+                  />
                 </div>
               </div>
             </div>
+            <div className="sticky-bottom">
+              <CDBContainer>
+              <CDBInput
+                  type="text"
+                  placeholder="Type a message"
+                  icon={
+                    <CDBIcon icon="paperclip" style={{ marginBottom: "7px" }} />
+                  }
+                  style={{ backgroundColor: "#f1f1f2" }}
+                />
+
+             </CDBContainer>
+              </div>
           </div>
         </div>
       </div>
