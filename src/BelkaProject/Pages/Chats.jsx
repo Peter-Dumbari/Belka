@@ -109,7 +109,7 @@ export default function Chats() {
             {Datas.map((users) => (
               <div
                 className="message"
-                style={{ marginTop: "10px" }}
+                style={{ marginTop: "10px", cursor: "pointer" }}
                 key={users.index}
               >
                 <div className="d-flex " style={{ borderTop: "1px solid" }}>
@@ -176,14 +176,14 @@ export default function Chats() {
       >
         <h4 style={{ fontWeight: "bold" }}>Chats</h4>
         <div className="row">
-          <div className="col-11 col-md-4 mb-3">
+          <div className="col-11 col-md-4 mb-3" style={{marginLeft: "20px" }}>
             <div className="row">
               <div
                 className="p-4"
                 style={{
                   backgroundColor: "#fff",
                   borderRadius: "10px",
-                  marginLeft: "5px",
+                  marginLeft: "0px",
                 }}
               >
                 <CDBInput
@@ -213,15 +213,49 @@ export default function Chats() {
             style={{
               backgroundColor: "#fff",
               borderRadius: "5px",
-              marginLeft: "20px",
+              marginLeft: "40px",
             }}
           >
             <div className="d-flex">
               <div className="me-auto p-2">
                 <div className="row">
-                <div className="d-flex " style={{ borderTop: "1px solid" }}>
                   <div className="me-auto p-2 mb-2">
                     <div className="row">
                       <div className="col-2">
                         <img
-                          src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon
+                          src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
+                          alt=""
+                          width="30px"
+                          className="position-relative"
+                          style={{ borderRadius: "10px", marginTop: "7px", backgroundColor: "purple" 
+                        }}
+                        />
+                      </div>
+                      <div className="col-10">
+                        <span className="row">
+                          <span style={{ fontWeight: "500" }}>
+                            Joan Baby
+                          </span>
+                          <span style={{ fontSize: "80%" }}>
+                            Online
+                          </span>
+                        </span>
+                      </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+              <div className="p-2">
+                <div className="d-inline-flex">
+                  <CDBIcon icon="phone" />
+                  <CDBIcon icon="envelope" />
+                  <CDBIcon icon="book" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </body>
+  );
+}
