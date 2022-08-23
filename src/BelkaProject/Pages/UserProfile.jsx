@@ -1,6 +1,7 @@
 import React from "react";
 import Sidebar from "../Components/SideNav";
 import { CDBIcon } from "cdbreact";
+import {Link} from "react-router-dom"
 
 
 export default function UserProfile() {
@@ -31,7 +32,7 @@ export default function UserProfile() {
         </div>
 
         <div className="row">
-          <div className="col p-3" style={{ textAlign: "center" }}>
+          <div className="col-12 col-md-6 p-3" style={{ textAlign: "center" }}>
             <img
               src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172455/2B8_5801.jpg"
               alt=""
@@ -53,8 +54,8 @@ export default function UserProfile() {
               />
             </div>
           </div>
-          <div className="col">
-            <span style={{ fontWeight: "bold" }}>
+          <div className="col-12 col-md-6 mb-2">
+            <span className="d-flex flex-row-reverse" style={{ fontWeight: "bold" }}>
               Registered on the 09 December, 2022
             </span>
             <div style={{ backgroundColor: "#e7eef0", borderRadius: "10px" }}>
@@ -136,25 +137,26 @@ export default function UserProfile() {
               <div className="row">
                 <div className="col">
                 <div className="rol mb-2">
-                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "skyblue", width:"80%"}}> 
+                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "skyblue", width:"100%"}}> 
                     <span className="me-auto" style={{marginRight: "3px"}}>Upcomming Programmes</span>
                     <CDBIcon icon="play" style={{marginTop: "5px"}}/>
                   </div>
                 </div>
                 <div className="rol mb-2">
-                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "lightgreen", width:"80%"}}> 
+                 <Link to="/programsattended" style={{textDecoration: "none"}}> <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "lightgreen", width:"100%"}}> 
                     <span className="me-auto" style={{marginRight: "3px"}}>Programmes Attended</span>
                     <CDBIcon icon="play" style={{marginTop: "5px"}}/>
                   </div>
+                </Link>
                 </div>
                 <div className="rol mb-2">
-                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "pink", width:"80%"}}> 
+                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", color: "pink", width:"100%"}}> 
                     <span className="me-auto" style={{marginRight: "3px"}}>Programmes Missed</span>
                     <CDBIcon icon="play" style={{marginTop: "5px"}}/>
                   </div>
                 </div>
                 <div className="rol mb-2">
-                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", width:"80%"}}> 
+                  <div className="d-flex p-2" style={{backgroundColor: "#e7fff5", width:"100%"}}> 
                     <span className="me-auto" style={{marginRight: "3px"}}>File/Report/Images</span>
                     <CDBIcon icon="play" style={{marginTop: "5px"}}/>
                   </div>

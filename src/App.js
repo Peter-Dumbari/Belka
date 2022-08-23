@@ -8,6 +8,8 @@ import ResetPassword from "./BelkaProject/Pages/ResetPassword";
 import Dashboard from "./BelkaProject/Pages/Dashboard";
 import UserLists from "./BelkaProject/Pages/UserLists";
 import UserProfile from "./BelkaProject/Pages/UserProfile";
+import ProgrammesAttended from "./BelkaProject/Pages/ProgrammesAttended";
+import Chats from "./BelkaProject/Pages/Chats";
 
 function App() {
   return (
@@ -22,6 +24,11 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/userlists" element={<UserLists />}></Route>
           <Route path="/userprofile" element={<UserProfile />}></Route>
+          <Route path="/chats" element={<Chats />}></Route>
+          <Route
+            path="/programsattended"
+            element={<ProgrammesAttended />}
+          ></Route>
           <Route path="*" element={<Nopage />}></Route>
         </Routes>
       </Router>

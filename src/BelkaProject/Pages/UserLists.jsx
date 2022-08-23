@@ -46,8 +46,8 @@ export default function UserLists() {
           </div>
         </div>
         <div className="row">
-          <div className="col-8"  style={{ marginTop: "-30px" }}>
-            <table className="table table-hover" style={{ color: "#484848" }}>
+          <div className="col- 11 col-md-8"  style={{ marginTop: "-30px" }}>
+            <table className="table table-responsive table-hover " style={{ color: "#484848" }}>
               <thead>
                 <tr style={{ fontSize: "75%" }}>
                   <th>Name</th>
@@ -56,7 +56,7 @@ export default function UserLists() {
                   <th>Gender</th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody style={{fontSize: "60%"}}>
                 <tr
                   style={{
                     backgroundColor: "#FFFFFF",
@@ -65,11 +65,11 @@ export default function UserLists() {
                   }}
                 >
                   <td>
-                    <span className="d-inline-flex p-2">
+                    <span className="d-inline-flex">
                       <img
                         src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
                         alt=""
-                        width="30px"
+                        width="20px"
                         style={{ borderRadius: "10px", marginRight: "5px" }}
                       />
                       <span>John Mary</span>
@@ -142,7 +142,7 @@ export default function UserLists() {
               </tbody>
             </table>
           </div>
-          <div className="col-4" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
+          <div className="col-10 col-md-4 mb-3" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
             <form action="">
             <div>
                 <center>

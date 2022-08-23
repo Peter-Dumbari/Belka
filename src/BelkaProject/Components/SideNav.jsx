@@ -24,7 +24,7 @@ const Sidebar = () => {
         <CDBSidebarContent className="sidebar-content" style={{marginRight: "25%"}}>
           <CDBSidebarMenu>
             <NavLink exact to="/dashboard" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
+               <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/userlists" activeClassName="activeClicked" >
               <CDBSidebarMenuItem icon="table">List of Users</CDBSidebarMenuItem>
@@ -32,7 +32,7 @@ const Sidebar = () => {
             <NavLink exact to="/profile" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="clock">Schedule/Program</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/analytics" activeClassName="activeClicked">
+            <NavLink exact to="/chats" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="comment" suffix={<CDBBadge color='danger' borderType="pill"><span style={{color: "#fff", fontWeight: "bold"}}>7</span></CDBBadge>}>Chats</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
