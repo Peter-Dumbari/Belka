@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "../Components/SideNav";
 import { CDBIcon, CDBInput, CDBContainer } from "cdbreact";
 
+
 export default function Chats() {
   function CallChart() {
     return (
@@ -288,18 +289,34 @@ export default function Chats() {
                 </div>
               </div>
             </div>
-            <div className="sticky-bottom">
-              <CDBContainer>
+              <div className="row">
+                {/* sender_column */}
+                <div className="col-6">
+                <div className="p-3" style={{backgroundColor: "#CCE089", borderRadius:"10px"}}>
+                <span>Hello, How are you today?</span>
+              </div>
+                </div>
+                {/* receiver-column */}
+                <div className="col-6"></div>
+              </div>
+              
+            {/* Chat  input*/}
+            <div className="d-inline-flex mb-3 p-1" style={{ position: "absolute",
+             bottom: "7%", width: "50%", 
+            }}>
+              <div className="me-auto">
               <CDBInput
                   type="text"
                   placeholder="Type a message"
                   icon={
                     <CDBIcon icon="paperclip" style={{ marginBottom: "7px" }} />
-                  }
-                  style={{ backgroundColor: "#f1f1f2" }}
-                />
 
-             </CDBContainer>
+                  }
+                  style={{ backgroundColor: "#f1f1f2", width:"280%" }}
+                />
+              </div>
+                <button className="btn btn-outline" style={{paddingTop:"0"}}><CDBIcon icon="smile"/></button>
+                <button className="btn btn-outline" style={{paddingTop:"0"}}><CDBIcon icon="paper-plane" style={{color:"green"}}/></button>
               </div>
           </div>
         </div>
