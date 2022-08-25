@@ -11,6 +11,7 @@ import UserProfile from "./BelkaProject/Pages/UserProfile";
 import ProgrammesAttended from "./BelkaProject/Pages/ProgrammesAttended";
 import Chats from "./BelkaProject/Pages/Chats";
 import Registerations from "./BelkaProject/Pages/Registerations";
+import Schedule from "./BelkaProject/Pages/Schedule";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/userlists" element={<UserLists />}></Route>
           <Route path="/userprofile" element={<UserProfile />}></Route>
           <Route path="/chats" element={<Chats />}></Route>
+          <Route path="/schedules" element={<Schedule />}></Route>
           <Route path="/registrations" element={<Registerations />}></Route>
           <Route
             path="/programsattended"
