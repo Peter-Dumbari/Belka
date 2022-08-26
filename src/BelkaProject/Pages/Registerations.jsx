@@ -1,11 +1,26 @@
 import React, { useState } from "react";
 import Sidebar from "../Components/SideNav";
-import { CDBIcon, CDBContainer, CDBSlider } from "cdbreact";
+import { CDBIcon, CDBContainer, CDBSlider, CDBSelect } from "cdbreact";
 import Calendar from "react-calendar";
 
 export default function Registerations() {
   const [value, onChange] = useState(new Date());
   const [digit, setDigit] = useState("");
+
+  const [option] = useState([
+    {
+      text: 'Mobile Computer Lab',
+      value: '1'
+    },
+    {
+      text: 'All Programme',
+      value: '2'
+    },
+    {
+      text: 'Option 3',
+      value: '3'
+    },
+  ])
 
   const TableDatas = [
     {
@@ -53,15 +68,10 @@ export default function Registerations() {
                   borderRadius: "10px",
                 }}
               >
-                <span className="d-flex p-2" style={{ color: "#fff" }}>
-                  <span className="me-auto" style={{ fontWeight: "bold" }}>
-                    All Programmes
-                  </span>
-                  <CDBIcon
-                    icon="play"
-                    style={{ rotate: " 90deg", margin: "0 10px 0 10px" }}
-                  />
-                </span>
+                 <span className="d-flex p-2" style={{ color: "#fff" }}>
+                 <CDBSelect options={option} selected="Choose an Option" style={{width: "100%", backgroundColor: "#028B2E", color: "#fff", fontWeight: "bold"}}/>
+
+              </span>
               </div>
             </div>
           </div>

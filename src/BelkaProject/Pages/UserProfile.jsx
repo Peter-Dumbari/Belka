@@ -16,16 +16,16 @@ export default function UserProfile() {
           <div className="p-2 m-3">
             <span className="d-inline-flex p-2">
               <CDBIcon
-                icon="comment"
-                style={{ color: "red", margin: "0 10px 0 10px" }}
+                icon="comment-alt"
+                style={{ margin: "0 10px 0 10px" }}
               />
               <CDBIcon
                 icon="envelope"
-                style={{ color: "green", margin: "0 10px 0 10px" }}
+                style={{margin: "0 10px 0 10px" }}
               />
               <CDBIcon
                 icon="trash"
-                style={{ color: "yellow", margin: "0 10px 0 10px" }}
+                style={{  margin: "0 10px 0 10px" }}
               />
             </span>
           </div>

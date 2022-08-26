@@ -1,8 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
 import Sidebar from "../Components/SideNav";
-import { CDBIcon } from "cdbreact";
+import { CDBIcon, CDBSelect } from "cdbreact";
+
 
 export default function ProgrammesAttended() {
+
+  const [option] = useState([
+    {
+      text: 'Mobile Computer Lab',
+      value: '1'
+    },
+    {
+      text: 'All Programme',
+      value: '2'
+    },
+    {
+      text: 'Option 3',
+      value: '3'
+    },
+  ])
   return (
     <>
       <Sidebar />
@@ -19,12 +35,9 @@ export default function ProgrammesAttended() {
                 borderRadius: "10px",
               }}
             >
-              <span className="d-flex p-2" style={{ color: "#fff"}}>
-                <span className="me-auto">Programmes Attended</span>
-                <CDBIcon
-                  icon="play"
-                  style={{ rotate: " 90deg", margin: "0 10px 0 10px" }}
-                />
+              <span className="d-flex p-2" style={{ color: "#fff" }}>
+                 <CDBSelect options={option} selected="Choose an Option" style={{width: "100%", backgroundColor: "#028B2E", color: "#fff", fontWeight: "bold"}}/>
+
               </span>
             </div>
           </div>

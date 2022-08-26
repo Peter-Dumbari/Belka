@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Line } from 'react-chartjs-2';
-import { CDBContainer } from "cdbreact";
-import Template from '../Images/BG.png'
+import { CDBContainer ,CDBProgress} from "cdbreact";
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -13,6 +14,19 @@ import {
   Legend,
 } from 'chart.js'
 
+
+
+
+export const Progress = () => {
+  const percentage = 66;
+  return (
+    <CDBContainer>
+            
+            <CircularProgressbar value={percentage} text={`${percentage}%`} />
+
+    </CDBContainer>
+  );
+};
 
 export default function DashboardChart() {
 
@@ -46,7 +60,7 @@ export default function DashboardChart() {
         </CDBContainer>
       </div>
       <div className="col-11 col-md-4 bg-light m-2" style={{borderRadius: "15px"}}>
-        <img src={Template} alt="" width="60%"/>
+       <Progress/>
       </div>
     </div>
   );

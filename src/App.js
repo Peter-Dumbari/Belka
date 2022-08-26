@@ -12,6 +12,8 @@ import ProgrammesAttended from "./BelkaProject/Pages/ProgrammesAttended";
 import Chats from "./BelkaProject/Pages/Chats";
 import Registerations from "./BelkaProject/Pages/Registerations";
 import Schedule from "./BelkaProject/Pages/Schedule";
+import EventList from "./BelkaProject/Pages/EventList";
+import CreateSchedule from "./BelkaProject/Pages/CreateSchedule";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/chats" element={<Chats />}></Route>
           <Route path="/schedules" element={<Schedule />}></Route>
           <Route path="/registrations" element={<Registerations />}></Route>
+          <Route path="/createschedule" element={<CreateSchedule />}></Route>
+          <Route path="/scheduleeventlist" element={<EventList />}></Route>
           <Route
             path="/programsattended"
             element={<ProgrammesAttended />}
