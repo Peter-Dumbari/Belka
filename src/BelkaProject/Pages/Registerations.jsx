@@ -77,7 +77,7 @@ export default function Registerations() {
           </div>
           <div className="row">
             <div
-              className="col-3 mb-1 p-3"
+              className="col-11 col-md-10 col-lg-4 mb-1 mt-2 p-3"
               style={{
                 backgroundColor: "#fff",
                 borderRadius: "10px",
@@ -150,7 +150,7 @@ export default function Registerations() {
               </div>
             </div>
             <div
-              className="col-8 p-3 mb-3 mt-3"
+              className="col-lg-7 col-md-11 col-sm-11 p-3 mb-3 mt-3"
               style={{ backgroundColor: "#fff", borderRadius: "10px" }}
             >
               <table

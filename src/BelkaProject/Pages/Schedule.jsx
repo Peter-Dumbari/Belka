@@ -17,31 +17,31 @@ export default function Schedule() {
         <h4>Schedule/Program</h4>
         <div className="d-flex justify-content-end">
           <button
-            className="btn btn-outline-success"
-            style={{ width: "10%", marginRight: "20px" }}
+            className="btn btn-outline-success col-2 col-md-2  "
+            style={{ marginRight: "20px" }}
           >
             Day
           </button>
           <button
-            className="btn btn-outline-success"
-            style={{ width: "10%", marginRight: "20px" }}
+            className="btn btn-outline-success col-2 col-md-2"
+            style={{ marginRight: "20px" }}
           >
             Week
           </button>
           <button
-            className="btn btn-outline-success"
-            style={{ width: "10%", marginRight: "20px" }}
+            className="btn btn-outline-success col-2 col-md-2"
+            style={{ marginRight: "20px" }}
           >
             Month
           </button>
-          <button className="btn btn-outline-success" style={{ width: "10%" }}>
+          <button className="btn btn-outline-success col-2 col-md-2">
             Year
           </button>
         </div>
 
         <div className="row">
           <div
-            className="col-3 p-3 mt-5 mb-3"
+            className="col-11   col-lg-3   col-md-8  0ffset-md-1    p-3 mt-5 mb-2"
             style={{
               marginRight: "20px",
               backgroundColor: "#fff",
@@ -51,7 +51,7 @@ export default function Schedule() {
           >
             <div className="mt-5" style={{ textAlign: "center" }}>
               <Link to="/createschedule" style={{textDecoration: "none"}}>
-              <button className="btn btn-success mb-3">
+              <button className="btn btn-success mb-3 col-10 col-md-11 ">
                 + Create Schedule/Programme
               </button>
               </Link>
@@ -90,7 +90,7 @@ export default function Schedule() {
             </div>
           </div>
           <div
-            className="col-8 mb-3 mt-5"
+            className="col-12 col-md-11 col-lg-8  mb-5 mt-5"
             style={{ backgroundColor: "#fff", borderRadius: "10px" }}
           >
             <Calendar onChange={onChange} value={value} className="kalistus" />
@@ -100,3 +100,4 @@ export default function Schedule() {
     </>
   );
 }
+ 

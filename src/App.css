@@ -150,6 +150,22 @@ input {
   background-color: #e6e6e6;
 }
 
+/* imageUploader */
+.imageUploadingBox{
+  border: 4px dashed green;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.imageuploadericon{
+  font-size: 30px;
+  color: green
+}
+
+.imageinput{
+  border-color: transparent;
+  align-self: center;
+}
 
 @media screen and (min-width:  975px){
   .container-fluid{

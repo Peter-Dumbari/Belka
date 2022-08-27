@@ -46,7 +46,7 @@ export default function EventList() {
         </div>
         <div className="row">
           <div
-            className="col-3 bg-light pt-2  mb-5"
+            className="col-11  col-lg-3  col-md-10   bg-light pt-2  mb-5 mt-3"
             style={{ textAlign: "center", marginLeft: "20px", marginRight: "20px", borderRadius: "10px" }}
           >
             <Link to="/createschedule" style={{textDecoration: "none"}}>
@@ -85,7 +85,7 @@ export default function EventList() {
                       }}
                     />
                   </div>
-                  <div className="col-10">
+                  <div className="col-10 col-lg-10 col-md-12">
                     <span className="row">
                       <span style={{ fontWeight: "500", color: "#484848" }}>
                         Joan Baby
@@ -99,7 +99,7 @@ export default function EventList() {
               </div>
             </div>
           </div>
-          <div className="col-8 mt-2 p-3 bg-light m-3" style={{borderRadius:"10px"}}>
+          <div className=" col-11 col-lg-8  col-md-12 mt-2 p-3 bg-light m-3" style={{borderRadius:"10px"}}>
             <table
               className="table table-striped table-hover"
               style={{ fontSize: "80%" }}
