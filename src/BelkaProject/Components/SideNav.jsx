@@ -44,7 +44,9 @@ const Sidebar = () => {
           </CDBSidebarMenu>
 
           <CDBSidebarMenu>
-            <CDBSidebarMenuItem icon="user"></CDBSidebarMenuItem>
+            <NavLink exact to="/adminprofile" activeClassName= "activeClicked">
+            <CDBSidebarMenuItem icon="user">Admin Name</CDBSidebarMenuItem>
+            </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 

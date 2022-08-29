@@ -59,8 +59,8 @@ export default function DashboardChart() {
           <Line data={data} options={{ responsive: true }} />
         </CDBContainer>
       </div>
-      <div className="col-11 col-md-4 bg-light m-2" style={{borderRadius: "15px"}}>
-       <Progress/>
+      <div className="col-11 col-md-4 bg-light m-2" style={{borderRadius: "15px", padding: "5%"}}>
+       <Progress style={{width: "10%"}}/>
       </div>
     </div>
   );

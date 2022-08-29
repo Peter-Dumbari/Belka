@@ -302,7 +302,7 @@ export default function Chats() {
               
             {/* Chat  input*/}
             <div className="d-inline-flex mb-3 p-1" style={{ position: "absolute",
-             bottom: "7%", width: "50%", 
+             bottom: "15%", width: "50%", 
             }}>
               <div className="me-auto">
               <CDBInput
