@@ -8,7 +8,7 @@ export default function UserProfile() {
   return (
     <>
       <Sidebar />
-      <div className="container-fluid" style={{ backgroundColor: "#f1f1f2" }}>
+      <div className="container-fluid" style={{ backgroundColor: "#f1f1f2", height: "100vh" }}>
         <div className="d-flex ">
           <div className="me-auto p-2">
             <h3 style={{ fontFamily: "Poppins" }}>User Profile</h3>

@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Sidebar from "../Components/SideNav";
 import { CDBIcon, CDBInput, CDBContainer } from "cdbreact";
-
 
 export default function Chats() {
   function CallChart() {
@@ -59,9 +58,36 @@ export default function Chats() {
         time: "3 hrs ago",
       },
     ];
+    const [messages, setMessages] = useState("");
+    const [messageStore, setMessageStore] = useState(Datas);
+    const [messsageFilter, setMessageFilter] = useState([]);
 
+    const filterMessage = (e) => {
+      if (e.target.value !== "") {
+        setMessages(e.target.value);
+        const searchMessages = messageStore.filter((o) =>
+          Object.keys(o).some((k) =>
+            String(o[k])
+              .toLocaleLowerCase()
+              .includes(e.target.value.toLocaleLowerCase())
+          )
+        );
+        setMessageFilter([...searchMessages]);
+      } else {
+        setMessages(e.target.value);
+        setMessageStore([...messageStore]);
+      }
+    };
     return (
       <>
+        <CDBInput
+          type="search"
+          placeholder="Search"
+          icon={<CDBIcon icon="search" style={{ marginBottom: "7px" }} />}
+          style={{ backgroundColor: "#f1f1f2" }}
+          value={messages}
+          onChange={filterMessage}
+        />
         <ul className="nav nav-pills nav-fill" id="myTab" role="tablist">
           <li className="nav-item" role="presentation">
             <button
@@ -114,46 +140,87 @@ export default function Chats() {
             aria-labelledby="home-tab"
             tabindex="0"
           >
-            {Datas.map((users) => (
-              <div
-                className="message"
-                style={{ marginTop: "10px", cursor: "pointer" }}
-                key={users.index}
-              >
-                <div className="d-flex " style={{ borderTop: "1px solid" }}>
-                  <div className="me-auto p-2 mb-2">
-                    <div className="row">
-                      <div className="col-2">
-                        <img
-                          src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
-                          alt=""
-                          width="30px"
-                          className="position-relative"
-                          style={{
-                            borderRadius: "10px",
-                            marginTop: "7px",
-                            backgroundColor: "purple",
-                          }}
-                        />
+            {messages.length > 0
+              ? messsageFilter.map((users) => (
+                  <div
+                    className="message"
+                    style={{ marginTop: "10px", cursor: "pointer" }}
+                    key={users.index}
+                  >
+                    <div className="d-flex " style={{ borderTop: "1px solid" }}>
+                      <div className="me-auto p-2 mb-2">
+                        <div className="row">
+                          <div className="col-2">
+                            <img
+                              src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
+                              alt=""
+                              width="30px"
+                              className="position-relative"
+                              style={{
+                                borderRadius: "10px",
+                                marginTop: "7px",
+                                backgroundColor: "purple",
+                              }}
+                            />
+                          </div>
+                          <div className="col-10">
+                            <span className="row">
+                              <span style={{ fontWeight: "500" }}>
+                                {users.Name}
+                              </span>
+                              <span style={{ fontSize: "80%" }}>
+                                {users.lastMessage}
+                              </span>
+                            </span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="col-10">
-                        <span className="row">
-                          <span style={{ fontWeight: "500" }}>
-                            {users.Name}
-                          </span>
-                          <span style={{ fontSize: "80%" }}>
-                            {users.lastMessage}
-                          </span>
-                        </span>
+                      <div className="p-2" style={{ width: "25%" }}>
+                        <span style={{ fontSize: "65%" }}>{users.time}</span>
                       </div>
                     </div>
                   </div>
-                  <div className="p-2" style={{ width: "25%" }}>
-                    <span style={{ fontSize: "65%" }}>{users.time}</span>
+                ))
+              : messageStore.map((users) => (
+                  <div
+                    className="message"
+                    style={{ marginTop: "10px", cursor: "pointer" }}
+                    key={users.index}
+                  >
+                    <div className="d-flex " style={{ borderTop: "1px solid" }}>
+                      <div className="me-auto p-2 mb-2">
+                        <div className="row">
+                          <div className="col-2">
+                            <img
+                              src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
+                              alt=""
+                              width="30px"
+                              className="position-relative"
+                              style={{
+                                borderRadius: "10px",
+                                marginTop: "7px",
+                                backgroundColor: "purple",
+                              }}
+                            />
+                          </div>
+                          <div className="col-10">
+                            <span className="row">
+                              <span style={{ fontWeight: "500" }}>
+                                {users.Name}
+                              </span>
+                              <span style={{ fontSize: "80%" }}>
+                                {users.lastMessage}
+                              </span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="p-2" style={{ width: "25%" }}>
+                        <span style={{ fontSize: "65%" }}>{users.time}</span>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            ))}
+                ))}
           </div>
           <div
             className="tab-pane fade"
@@ -197,15 +264,6 @@ export default function Chats() {
                   marginLeft: "0px",
                 }}
               >
-                <CDBInput
-                  type="search"
-                  placeholder="Search"
-                  icon={
-                    <CDBIcon icon="search" style={{ marginBottom: "7px" }} />
-                  }
-                  style={{ backgroundColor: "#f1f1f2" }}
-                />
-
                 <FillExample />
               </div>
               <div
@@ -289,35 +347,47 @@ export default function Chats() {
                 </div>
               </div>
             </div>
-              <div className="row">
-                {/* sender_column */}
-                <div className="col-6">
-                <div className="p-3" style={{backgroundColor: "#CCE089", borderRadius:"10px"}}>
-                <span>Hello, How are you today?</span>
-              </div>
+            <div className="row">
+              {/* sender_column */}
+              <div className="col-6">
+                <div
+                  className="p-3"
+                  style={{ backgroundColor: "#CCE089", borderRadius: "10px" }}
+                >
+                  <span>Hello, How are you today?</span>
                 </div>
-                {/* receiver-column */}
-                <div className="col-6"></div>
               </div>
-              
-            {/* Chat  input*/}
-            <div className="d-inline-flex mb-3 p-1" style={{ position: "absolute",
-             bottom: "15%", width: "50%", 
-            }}>
-              <div className="me-auto">
-              <CDBInput
-                  type="text"
-                  placeholder="Type a message"
-                  icon={
-                    <CDBIcon icon="paperclip" style={{ marginBottom: "7px" }} />
+              {/* receiver-column */}
+              <div className="col-6"></div>
+            </div>
 
-                  }
-                  style={{ backgroundColor: "#f1f1f2", width:"280%" }}
-                />
+            {/* Chat  input*/}
+            <div className="row">
+              <div
+                className="d-inline-flex mb-3 p-"
+                style={{ marginTop: "auto" }}
+              >
+                <div className="me-auto" style={{ width: "100%" }}>
+                  <CDBInput
+                    type="text"
+                    placeholder="Type a message"
+                    icon={
+                      <CDBIcon
+                        icon="paperclip"
+                        style={{ marginBottom: "7px" }}
+                      />
+                    }
+                    style={{ backgroundColor: "#f1f1f2", width: "100%" }}
+                  />
+                </div>
+                <button className="btn btn-outline" style={{ paddingTop: "0" }}>
+                  <CDBIcon icon="smile" />
+                </button>
+                <button className="btn btn-outline" style={{ paddingTop: "0" }}>
+                  <CDBIcon icon="paper-plane" style={{ color: "green" }} />
+                </button>
               </div>
-                <button className="btn btn-outline" style={{paddingTop:"0"}}><CDBIcon icon="smile"/></button>
-                <button className="btn btn-outline" style={{paddingTop:"0"}}><CDBIcon icon="paper-plane" style={{color:"green"}}/></button>
-              </div>
+            </div>
           </div>
         </div>
       </div>

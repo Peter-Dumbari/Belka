@@ -17,6 +17,7 @@ import CreateSchedule from "./BelkaProject/Pages/CreateSchedule";
 import AdminProfile from "./BelkaProject/Pages/AdminProfile";
 import EdithAdminProfile from "./BelkaProject/Pages/EdithAdminProfile";
 import MyTeam from "./BelkaProject/Pages/MyTeam";
+import FIlemanager from "./BelkaProject/Pages/FIlemanager";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/scheduleeventlist" element={<EventList />}></Route>
           <Route path="/adminprofile" element={<AdminProfile />}></Route>
           <Route path="/myteam" element={<MyTeam />}></Route>
+          <Route path="/filemanager" element={<FIlemanager />}></Route>
           <Route
             path="/editadminprofile"
             element={<EdithAdminProfile />}

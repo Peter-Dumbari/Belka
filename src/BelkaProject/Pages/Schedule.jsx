@@ -6,6 +6,34 @@ import { Link } from "react-router-dom";
 
 export default function Schedule() {
   const [value, onChange] = useState(new Date());
+  const datas = [
+    { id: "0", email: "dummytwiz@teting.com", name: "Yellow Boy" },
+    { id: "1", email: "ppeofif@teting.com", name: "Blue Boy" },
+    { id: "2", email: "fdidfiifjf@teting.com", name: "Fire Boy" },
+    { id: "3", email: "helloweii@teting.com", name: "Joe Boy" },
+  ];
+
+  const [dataSource, setDataSource] = useState(datas);
+  const [tableFilter, setTableFilter] = useState([]);
+  const [things, setThings] = useState("");
+
+
+  const filterData = (e) => {
+    if (e.target.value !=="") {
+      setThings(e.target.value);
+      const filterTable = dataSource.filter(o =>
+        Object.keys(o).some(k =>
+          String(o[k])
+            .toLocaleLowerCase()
+            .includes(e.target.value.toLocaleLowerCase())
+        )
+      );
+      setTableFilter([...filterTable]);
+    } else {
+      setThings(e.target.value);
+      setDataSource([...dataSource]);
+    }
+  };
 
   return (
     <>
@@ -50,12 +78,17 @@ export default function Schedule() {
             }}
           >
             <div className="mt-5" style={{ textAlign: "center" }}>
-              <Link to="/createschedule" style={{textDecoration: "none"}}>
-              <button className="btn btn-success mb-3 col-10 col-md-11 ">
-                + Create Schedule/Programme
-              </button>
+              <Link to="/createschedule" style={{ textDecoration: "none" }}>
+                <button className="btn btn-success mb-3 col-10 col-md-11 ">
+                  + Create Schedule/Programme
+                </button>
               </Link>
-            <Link to="/scheduleeventlist" style={{textDecoration: "none"}}><button className="btn btn-success"> Schedule/Event List</button></Link>
+              <Link to="/scheduleeventlist" style={{ textDecoration: "none" }}>
+                <button className="btn btn-success">
+                  {" "}
+                  Schedule/Event List
+                </button>
+              </Link>
             </div>
 
             <div className="mt-3 p-3 mb-5">
@@ -64,29 +97,72 @@ export default function Schedule() {
                 icon={<CDBIcon icon="search" style={{ marginBottom: "4px" }} />}
                 placeholder="Search People"
                 type="search"
+                value={things}
+                onChange={filterData}
               />
-              <div className="row pb-3" style={{ borderBottom: "1px solid" }}>
-                <div className="col-2">
-                  <img
-                    src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
-                    alt=""
-                    width="30px"
-                    className="position-relative"
-                    style={{
-                      borderRadius: "10px",
-                      marginTop: "7px",
-                    }}
-                  />
-                </div>
-                <div className="col-10">
-                  <span className="row">
-                    <span style={{ fontWeight: "500" }}>Joan Baby</span>
-                    <span style={{ fontSize: "80%" }}>
-                      dummytwiz@gmail.yahoo
-                    </span>
-                  </span>
-                </div>
-              </div>
+              {things.length > 0
+                ? tableFilter.map((users) => {
+                    return (
+                      <div
+                        className="row pb-3"
+                        style={{ borderBottom: "1px solid" }}
+                      >
+                        <div className="col-2">
+                          <img
+                            src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
+                            alt=""
+                            width="30px"
+                            className="position-relative"
+                            style={{
+                              borderRadius: "10px",
+                              marginTop: "7px",
+                            }}
+                          />
+                        </div>
+                        <div className="col-10">
+                          <span className="row" key={users.Id}>
+                            <span style={{ fontWeight: "500" }}>
+                              {users.name}
+                            </span>
+                            <span style={{ fontSize: "80%" }}>
+                              {users.email}
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  })
+                : dataSource.map((users) => {
+                    return (
+                      <div
+                        className="row pb-3"
+                        style={{ borderBottom: "1px solid" }}
+                      >
+                        <div className="col-2">
+                          <img
+                            src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
+                            alt=""
+                            width="30px"
+                            className="position-relative"
+                            style={{
+                              borderRadius: "10px",
+                              marginTop: "7px",
+                            }}
+                          />
+                        </div>
+                        <div className="col-10">
+                          <span className="row" key={users.Id}>
+                            <span style={{ fontWeight: "500" }}>
+                              {users.name}
+                            </span>
+                            <span style={{ fontSize: "80%" }}>
+                              {users.email}
+                            </span>
+                          </span>
+                        </div>
+                      </div>
+                    );
+                  })}
             </div>
           </div>
           <div
@@ -100,4 +176,3 @@ export default function Schedule() {
     </>
   );
 }
- 

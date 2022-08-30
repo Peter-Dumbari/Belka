@@ -5,9 +5,9 @@ import {  CDBIcon } from "cdbreact";
 export const NewRegistration = () => {
   return (
     <div className='row '>
-        <div className="col-11 col-sm-11 col-md-7 bg-light m-3" style={{borderRadius: "15px"}}>
+        <div className="col-11 col-sm-11 col-md-7 bg-light m-2 p-3" style={{borderRadius: "5px"}}>
             <h5 style={{fontFamily: 'Poppins'}}>Recent Registrations</h5>
-            <table className='table table-striped table-hover' style={{fontSize: "60%"}}>
+            <table className='table table-striped table-hover' style={{fontSize: "85%"}}>
                 <thead>
                     <tr>
                         <th>Ticket no</th>
@@ -32,7 +32,7 @@ export const NewRegistration = () => {
                 </tbody>
             </table>
         </div>
-        <div className="col-11 col-md-4 cols-md-12 bg-light m-3" style={{borderRadius: "15px"}}>
+        <div className="col-11 col-md-4 cols-md-12 bg-light m-2 p-2"  style={{borderRadius: "5px"}}>
         <h5 style={{fontFamily: 'Poppins'}}>Top Programmes</h5>
            <div className='d-inline-flex p-2' style={{borderBottom: '1px solid',marginLeft: "25px", width: "85%"}}>
            <span className=''>
