@@ -7,7 +7,7 @@ export const NewRegistration = () => {
     <div className='row '>
         <div className="col-11 col-sm-11 col-md-7 bg-light m-2 p-3" style={{borderRadius: "5px"}}>
             <h5 style={{fontFamily: 'Poppins'}}>Recent Registrations</h5>
-            <table className='table table-striped table-hover' style={{fontSize: "85%"}}>
+            <table className='table table-striped table-hover'>
                 <thead>
                     <tr>
                         <th>Ticket no</th>

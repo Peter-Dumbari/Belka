@@ -39,6 +39,18 @@ input {
 
 }
 
+
+.butting{
+  border: none;
+  color: #028B2E;
+  background-color: #c9ddd3;
+  border-radius: 5px;
+}
+
+.butting:hover{
+  background-color: white;
+}
+
 .react-calendar--doubleView {
   width: 700px;
 }

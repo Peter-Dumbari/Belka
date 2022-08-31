@@ -18,6 +18,8 @@ import AdminProfile from "./BelkaProject/Pages/AdminProfile";
 import EdithAdminProfile from "./BelkaProject/Pages/EdithAdminProfile";
 import MyTeam from "./BelkaProject/Pages/MyTeam";
 import FIlemanager from "./BelkaProject/Pages/FIlemanager";
+import AcademicClassAssignment from "./BelkaProject/Pages/AcademicClassAssignment";
+import HighSchoolAssistance from "./BelkaProject/Pages/HighSchoolAssistance";
 
 function App() {
   return (
@@ -40,6 +42,14 @@ function App() {
           <Route path="/adminprofile" element={<AdminProfile />}></Route>
           <Route path="/myteam" element={<MyTeam />}></Route>
           <Route path="/filemanager" element={<FIlemanager />}></Route>
+          <Route
+            path="/highschoolassistance"
+            element={<HighSchoolAssistance />}
+          ></Route>
+          <Route
+            path="/academincclassassignment"
+            element={<AcademicClassAssignment />}
+          ></Route>
           <Route
             path="/editadminprofile"
             element={<EdithAdminProfile />}

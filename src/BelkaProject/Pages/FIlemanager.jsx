@@ -26,7 +26,8 @@ export default function FIlemanager() {
         </div>
         <span style={{ fontWeight: "bold" }}>Assignments</span>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3  g-3 mt-2 mb-5">
-          <div className="col">
+         <Link to="/highschoolassistance" style={{textDecoration: "none", color: "#000"}}>
+         <div className="col">
             <div className="card">
               <div className="card-body p-4">
                 <div className="card-title">
@@ -71,7 +72,9 @@ export default function FIlemanager() {
               </div>
             </div>
           </div>
-          <div className="col">
+         </Link>
+         <Link to="/academincclassassignment" style={{textDecoration: "none", color: "#000 "}}>
+         <div className="col">
             <div className="card">
               <div className="card-body p-4">
                 <div className="card-title">
@@ -116,6 +119,7 @@ export default function FIlemanager() {
               </div>
             </div>
           </div>
+         </Link>
         </div>
         <span style={{ fontWeight: "bold" }}>Report</span>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3  g-3 mt-2">
