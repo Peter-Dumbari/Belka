@@ -34,7 +34,7 @@ export default function AdminProfile() {
               src="https://th.bing.com/th/id/R.daced5c5d9871280ca8e2de03bf8bee5?rik=sUyBpUyNvR6IqQ&pid=ImgRaw&r=0"
               alt=""
               width="100%"
-              style={{ borderRadius: "10px" }}
+              style={{ borderRadius: "10px", position: "relative" }}
             />
             <h4
               className="mt-3 text-center"

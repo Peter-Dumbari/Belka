@@ -20,6 +20,7 @@ import MyTeam from "./BelkaProject/Pages/MyTeam";
 import FIlemanager from "./BelkaProject/Pages/FIlemanager";
 import AcademicClassAssignment from "./BelkaProject/Pages/AcademicClassAssignment";
 import HighSchoolAssistance from "./BelkaProject/Pages/HighSchoolAssistance";
+import MoniteringPrograme from "./BelkaProject/Pages/moniteringPrograme/MoniteringPrograme";
 
 function App() {
   return (
@@ -33,7 +34,10 @@ function App() {
           <Route path="/resetPassord" element={<ResetPassword />}></Route>
           <Route path="/dashboard" element={<Dashboard />}></Route>
           <Route path="/userlists" element={<UserLists />}></Route>
-          <Route path="/userprofile" element={<UserProfile />}></Route>
+          <Route
+            path="/userprofile/:name/:gender/:email/:phone"
+            element={<UserProfile />}
+          ></Route>
           <Route path="/chats" element={<Chats />}></Route>
           <Route path="/schedules" element={<Schedule />}></Route>
           <Route path="/registrations" element={<Registerations />}></Route>
@@ -42,6 +46,10 @@ function App() {
           <Route path="/adminprofile" element={<AdminProfile />}></Route>
           <Route path="/myteam" element={<MyTeam />}></Route>
           <Route path="/filemanager" element={<FIlemanager />}></Route>
+          <Route
+            path="/monteringprograme"
+            element={<MoniteringPrograme />}
+          ></Route>
           <Route
             path="/highschoolassistance"
             element={<HighSchoolAssistance />}

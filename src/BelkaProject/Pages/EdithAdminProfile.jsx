@@ -23,12 +23,21 @@ export default function EdithAdminProfile() {
         </div>
         <div className="row">
           <div className="col-11 col-md-10 col-lg-3 mb-3">
-            <img
-              src="https://th.bing.com/th/id/R.daced5c5d9871280ca8e2de03bf8bee5?rik=sUyBpUyNvR6IqQ&pid=ImgRaw&r=0"
-              alt=""
-              width="100%"
-              style={{ borderRadius: "10px" }}
-            />
+          <div className="mt-4" style={{ position: "relative" }}>
+              <img
+                src="https://th.bing.com/th/id/R.daced5c5d9871280ca8e2de03bf8bee5?rik=sUyBpUyNvR6IqQ&pid=ImgRaw&r=0"
+                alt=""
+                width="100%"
+                style={{ borderRadius: "10px", position: "relative" }}
+              />
+              <label htmlFor="file">
+              <span class="position-absolute top-0 start-100 translate-middle btn btn-success pr-5 pl-5 pt-2  text-center" style={{borderRadius: "200px" }}>
+                <h5>+</h5>
+              </span>
+              </label>
+              
+              <input type="file" id="file" style={{display: "none"}}/>
+            </div>
             <h4
               className="mt-3 text-center"
               style={{ color: "green", fontWeight: "bold" }}

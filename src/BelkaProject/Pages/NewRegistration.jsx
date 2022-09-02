@@ -7,7 +7,8 @@ export const NewRegistration = () => {
     <div className='row '>
         <div className="col-11 col-sm-11 col-md-7 bg-light m-2 p-3" style={{borderRadius: "5px"}}>
             <h5 style={{fontFamily: 'Poppins'}}>Recent Registrations</h5>
-            <table className='table table-striped table-hover'>
+            <div className="table-responsive">
+                <table className='table table-striped table-hover'>
                 <thead>
                     <tr>
                         <th>Ticket no</th>
@@ -31,8 +32,9 @@ export const NewRegistration = () => {
                     </tr>
                 </tbody>
             </table>
+            </div>
         </div>
-        <div className="col-11 col-md-4 cols-md-12 bg-light m-2 p-2"  style={{borderRadius: "5px"}}>
+        <div className="col-11 col-md-4 cols-md-12 bg-light m-2 p-2 "  style={{borderRadius: "5px"}}>
         <h5 style={{fontFamily: 'Poppins'}}>Top Programmes</h5>
            <div className='d-inline-flex p-2' style={{borderBottom: '1px solid',marginLeft: "25px", width: "85%"}}>
            <span className=''>
@@ -40,7 +42,7 @@ export const NewRegistration = () => {
             </span>
             <div className="row">
                 <span style={{marginBottom: "-5px"}}>Summer Camp</span>
-                <span className='d-inline-flex p-2' style={{color: "green", fontSize: "10px", marginTop: "-6px", marginLeft: "3px"}}>
+                <span className='d-inline-flex p-2 ' style={{color: "green", fontSize: "10px", marginTop: "-6px", marginLeft: "3px"}}>
                 {<CDBIcon icon="star" />}                
                 {<CDBIcon icon="star" />}                
                 {<CDBIcon icon="star" />}                

@@ -24,7 +24,7 @@ export default function MyTeam() {
         </div>
         <table
               className="table  table-borderless"
-              style={{ color: "#484848", fontSize: "80%" }}
+              style={{ color: "#484848"}}
             >
               <thead style={{ color: "#484848"}}>
                 <tr>

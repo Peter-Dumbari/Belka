@@ -35,24 +35,24 @@ export default function Chats() {
   function FillExample() {
     const Datas = [
       {
-        index: "1",
+        index: 1,
         Name: "Peter Dumbari",
         lastMessage: "How are you now",
         time: "2 hrs ago",
       },
       {
-        index: "2",
+        index: 2,
         Name: "Gift John",
         lastMessage: "Am coming now",
         time: "1 hrs ago",
       },
       {
-        index: "3",
+        index: 3,
         Name: "Young John",
         lastMessage: "How are guys now",
         time: "3 hrs ago",
       },
-      {
+      { index: 4,
         Name: "Barika John",
         lastMessage: "How are guys now",
         time: "3 hrs ago",

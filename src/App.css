@@ -179,10 +179,29 @@ input {
   align-self: center;
 }
 
+.trashcanIcon{
+  color: rgb(230, 63, 63);
+  font-size: 20px;
+}
+
+.downloadIcon:hover{
+  color: rgb(14, 131, 14)
+}
+
+.deleteButtonHighSchoolAssist{
+  border: none;
+  background-color: transparent;
+}
+.link{
+  text-decoration: none;
+  color: #000 
+}
 
 @media screen and (min-width:  975px){
   .container-fluid{
     padding-left: 7%;
+    background-color: #f1f1f2;
+    height: 100vh;
   }
 
 

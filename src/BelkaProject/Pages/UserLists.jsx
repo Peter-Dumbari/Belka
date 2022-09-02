@@ -19,14 +19,18 @@ import PerformanceChart from "./PerformanceChart";
 export default function UserLists() {
   const [value, setValue] = useState("");
   const datas=[
-    {id:"0", email: "dummty@gmail.com", name: "Peter Dumbari",  phoneNumber: "+38373938333", gender: "male"},
-    {id:"1", email: "dum@gmail.com", name: "Love Dumbari",  phoneNumber: "+38373938333", gender: "female"},
-    {id:"2", email: "pee@gmail.com", name: "Dumtee Dumbari",  phoneNumber: "+38373938333", gender: "male"},
+    {id:0, email: "dummty@gmail.com", name: "Peter Dumbari",  phoneNumber: "+38373938333", gender: "male"},
+    {id:1, email: "dum@gmail.com", name: "Love Dumbari",  phoneNumber: "+38373938333", gender: "female"},
+    {id:2, email: "pee@gmail.com", name: "Dumtee Dumbari",  phoneNumber: "+38373938333", gender: "male"},
+    {id:3, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "male"},
   ]
   const [dataSource, setDataSource ]= useState(datas)
   const[items, setItems] = useState("")
   const [tableFilter, setTableFilter] = useState([]);
 
+  const handleDelete=(id)=>{
+    setDataSource(dataSource.filter((items)=> items.id !== id))
+  }
 
   const filterDatas =(e)=>{
     if (e.target.value !==""){
@@ -75,17 +79,17 @@ export default function UserLists() {
           </div>
         </div>
         <div className="row">
-          <div className="col- 11 col-md-8"  style={{ marginTop: "-30px" }}>
-            <table className="table table-responsive table-hover " style={{ color: "#484848" }}>
+          <div className="col- 11 col-md-8 table-responsive"  style={{ marginTop: "-30px" }}>
+            <table className="table table-hover " style={{ color: "#484848", }}>
               <thead>
-                <tr style={{ fontSize: "75%" }}>
+                <tr>
                   <th>Name</th>
                   <th>Email</th>
                   <th>Phone number</th>
                   <th>Gender</th>
                 </tr>
               </thead>
-              <tbody style={{fontSize: "60%"}}>
+              <tbody>
                 {items.length > 0 ? tableFilter.map((users)=>{
                   return(
                     <tr
@@ -101,8 +105,9 @@ export default function UserLists() {
                       <img
                         src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
                         alt=""
-                        width="20px"
-                        style={{ borderRadius: "10px", marginRight: "5px" }}
+                        style={{ borderRadius: "10px", marginRight: "5px", width: "20px", height: "20px" 
+                      }}
+                      className="d-col-1"
                       />
                       <span>{users.name}</span>
                     </span>
@@ -136,7 +141,7 @@ export default function UserLists() {
                             </CDBDropDownToggle>
                             <CDBDropDownMenu className="hi">
                               <CDBDropDownItem>
-                                <Link to="/userprofile" style={{textDecoration: "none"}}>
+                                <Link to={`/userprofile/${users.name}/${users.gender}/${users.email}/${users.phoneNumber}`} style={{textDecoration: "none"}}>
                                 <span
                                   className="d-inline-flex p-2"
                                   style={{
@@ -159,6 +164,7 @@ export default function UserLists() {
                                     borderRadius: "15px",
                                     color: "#EA6354",
                                   }}
+                                  onClick={()=>handleDelete(users.id)}
                                 >
                                   <CDBIcon icon="trash"></CDBIcon>
                                   Delete
@@ -223,7 +229,7 @@ export default function UserLists() {
                             </CDBDropDownToggle>
                             <CDBDropDownMenu className="hi">
                               <CDBDropDownItem>
-                                <Link to="/userprofile" style={{textDecoration: "none"}}>
+                                <Link to={`/userprofile/${users.name}/${users.gender}/${users.email}/${users.phoneNumber}`} style={{textDecoration: "none"}}>
                                 <span
                                   className="d-inline-flex p-2"
                                   style={{
@@ -246,6 +252,7 @@ export default function UserLists() {
                                     borderRadius: "15px",
                                     color: "#EA6354",
                                   }}
+                                  onClick={()=>handleDelete(users.id)}
                                 >
                                   <CDBIcon icon="trash"></CDBIcon>
                                   Delete

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Sidebar from "../Components/SideNav";
 import { CDBIcon } from "cdbreact";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 
 
 export default function UserProfile() {
+  var  { name,  gender, gender, email, phone } = useParams();
+
+  
+
   return (
     <>
       <Sidebar />
@@ -30,7 +34,7 @@ export default function UserProfile() {
             </span>
           </div>
         </div>
-
+      
         <div className="row">
           <div className="col-12 col-md-6 p-3" style={{ textAlign: "center" }}>
             <img
@@ -39,7 +43,8 @@ export default function UserProfile() {
               width="40%"
               style={{ borderRadius: "200px" }}
             />
-            <h4 style={{ color: "#028B2E" }}>John Mary</h4>
+              <h4 style={{ color: "#028B2E" }}>{name}</h4>
+            
             <hr style={{border:"2px solid"}}/>
             <div style={{ textAlign: "left" }}>
               <p style={{ fontWeight: "bold" }}>Further Information</p>
@@ -67,15 +72,15 @@ export default function UserProfile() {
                   <div className="row" style={{ borderTop: "solid 1px" }}>
                     <span className="d-inline-flex p-2">
                       <CDBIcon icon="envelope" style={{ marginRight: "5px" }} />
-                      <span>johnmary7@gmail.com</span>
+                      <span>{email}</span>
                     </span>
                     <span className="d-inline-flex p-2">
                       <CDBIcon icon="phone" style={{ marginRight: "5px" }} />
-                      <span>+333-39393-3939</span>
+                      <span>{phone}</span>
                     </span>
                     <span className="d-inline-flex p-2">
                       <CDBIcon icon="user" style={{ marginRight: "5px" }} />
-                      <span>Male</span>
+                      <span>{gender}</span>
                     </span>
                     <span className="d-inline-flex p-2">
                       <CDBIcon icon="book" style={{ marginRight: "5px" }} />
