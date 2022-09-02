@@ -36,7 +36,7 @@ export default function EdithAdminProfile() {
               </span>
               </label>
               
-              <input type="file" id="file" style={{display: "none"}}/>
+              <input type="file" id="file"  accept="image/*"  style={{display: "none"}}/>
             </div>
             <h4
               className="mt-3 text-center"
