@@ -59,21 +59,24 @@ export default function DashboardChart() {
     //    <Progress style={{width: "10%"}}/>
     //   </div>
     // </div>
-    <div className="mt-4 p-3 col-12 col-md-12 col-lg-12" style={{ backgroundColor: "#028b2e0d"}}>
-      <div className="row">
+    <div
+      className="mt-4 p-3 col-sm-12 col-md-12 col-lg-12"
+      style={{ backgroundColor: "#028b2e0d" }}
+    >
+      <div className="row row-cols-12">
         <span> 1 day trip</span>
 
         <h4 className="mt-5">5 days to a </h4>
 
-        <h1 style={{ color: "green" }}>Trip to Wonderland</h1>
+        <h1 style={{ color: "green", fontSize: '300%' }}>Trip to Wonderland</h1>
         <div className="col">
           <div className="d-inline-flex">
-            <CDBIcon icon="map-marker" style={{marginTop: "4px"}} />
+            <CDBIcon icon="map-marker" style={{ marginTop: "4px" }} />
             <span>Texas</span>
 
             <div className="row" style={{ marginLeft: "30%" }}>
               <div className="d-inline-flex">
-                <CDBIcon icon="clock" style={{marginTop: "4px"}}/>
+                <CDBIcon icon="clock" style={{ marginTop: "4px" }} />
                 <span>Tuesday 7th june 2022</span>
               </div>
               <span>08:00 Am (Meeting Time)</span>
@@ -81,7 +84,37 @@ export default function DashboardChart() {
           </div>
         </div>
 
-        <h4 className="mt-4">Profile pictures still working on</h4>
+        <div className="d-inline-flex">
+          <div className="d-line-flex">
+            <img
+              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
+              className="dashboardpicture"
+              alt=""
+            />
+            <img
+              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
+              className="dashboardpicture"
+              alt=""
+            />
+            <img
+              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
+              className="dashboardpicture"
+              alt=""
+            />
+          </div>
+          <div></div>
+          <span className="dashboarduserindicator d-none d-md-none d-lg-block">
+            <span className="d-flex" style={{ marginBottom: "2%", fontSize:"75%", fontWeight: "bold"}}>
+              <span className="me-auto ">
+              +50 people going for this trip
+              </span>
+              <span>
+              +50 people going for this trip
+              </span>
+            </span>
+          </span>
+        </div>
+
       </div>
     </div>
   );
