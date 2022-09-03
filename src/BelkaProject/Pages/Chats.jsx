@@ -52,7 +52,8 @@ export default function Chats() {
         lastMessage: "How are guys now",
         time: "3 hrs ago",
       },
-      { index: 4,
+      {
+        index: 4,
         Name: "Barika John",
         lastMessage: "How are guys now",
         time: "3 hrs ago",
@@ -347,7 +348,7 @@ export default function Chats() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row chatter">
               {/* sender_column */}
               <div className="col-6">
                 <div
@@ -359,38 +360,41 @@ export default function Chats() {
               </div>
               {/* receiver-column */}
               <div className="col-6"></div>
-            </div>
 
-            {/* Chat  input*/}
-            <div className="row">
-              <div
-                className="d-inline-flex mb-3 p-"
-                style={{ marginTop: "auto" }}
-              >
-                <div className="me-auto" style={{ width: "100%" }}>
-                  <CDBInput
-                    type="text"
-                    placeholder="Type a message"
-                    icon={
-                      <CDBIcon
-                        icon="paperclip"
-                        style={{ marginBottom: "7px" }}
-                      />
-                    }
-                    style={{ backgroundColor: "#f1f1f2", width: "100%" }}
-                  />
+              {/* Chat  input*/}
+              <div className="row chatbox">
+                <div className="col-9 offset-1">
+                    <CDBInput
+                      type="text"
+                      placeholder="Type a message"
+                      icon={
+                        <CDBIcon
+                          icon="paperclip"
+                          style={{ marginBottom: "7px" }}
+                        />
+                      }
+                    />
+                  </div>
+                  <div className="col-2 p-2">
+                      <button
+                        className="btn btn-outline"
+                      >
+                        <CDBIcon icon="smile" />
+                      </button>
+                      <button
+                        className="btn btn-outline"
+                      >
+                        <CDBIcon
+                          icon="paper-plane"
+                          style={{ color: "green" }}
+                        />
+                      </button>
+                    </div>                  
                 </div>
-                <button className="btn btn-outline" style={{ paddingTop: "0" }}>
-                  <CDBIcon icon="smile" />
-                </button>
-                <button className="btn btn-outline" style={{ paddingTop: "0" }}>
-                  <CDBIcon icon="paper-plane" style={{ color: "green" }} />
-                </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
     </body>
   );
 }

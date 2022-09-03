@@ -48,6 +48,13 @@ export default function DashboardChart() {
   //   ],
   // });
 
+  const UsersImages =[
+    {id: 1, image: "https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"},
+    {id: 2, image: "https://th.bing.com/th/id/R.7b5ddec9541a0c8367ce8f753542ec7d?rik=WxUbYAZQbDWiRA&pid=ImgRaw&r=0"},
+    {id: 3, image: "https://th.bing.com/th/id/R.58fbedb76c461514f367745cb1931c42?rik=NuxpZVehD4idhQ&pid=ImgRaw&r=0"},
+    {id: 4, image: "https://th.bing.com/th/id/R.1358002cbf5542127fb15e5d892f2df0?rik=GFG48svB9d6cmA&pid=ImgRaw&r=0"},
+  ]
+
   return (
     // <div className="row " style={{marginTop: "2%" }}>
     //   <div className="col-11 col-md-7 bg-light m-3" style={{borderRadius: "15px"}}>
@@ -75,32 +82,24 @@ export default function DashboardChart() {
             <span>Texas</span>
 
             <div className="row" style={{ marginLeft: "30%" }}>
-              <div className="d-inline-flex">
+              <div className="d-inline">
                 <CDBIcon icon="clock" style={{ marginTop: "4px" }} />
                 <span>Tuesday 7th june 2022</span>
               </div>
-              <span>08:00 Am (Meeting Time)</span>
+              <span style={{marginLeft: "25px"}}>08:00 Am (Meeting Time)</span>
             </div>
           </div>
         </div>
 
         <div className="d-inline-flex">
           <div className="d-line-flex">
-            <img
-              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
+            {UsersImages.map(profile=>
+              <img
+              src={profile.image}
               className="dashboardpicture"
               alt=""
             />
-            <img
-              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
-              className="dashboardpicture"
-              alt=""
-            />
-            <img
-              src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
-              className="dashboardpicture"
-              alt=""
-            />
+            )}
           </div>
           <div></div>
           <span className="dashboarduserindicator d-none d-md-none d-lg-block">
