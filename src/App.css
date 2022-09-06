@@ -33,9 +33,10 @@ input {
 }
 
 .hi {
-  border-radius: 30px;
-  box-shadow: 0px 10px 20px 0px #1111111a; 
-  ;
+  border-radius: 30px !important;
+  box-shadow: -30px 17px 30px -20px rgba(0,0,0,0.75);
+  -webkit-box-shadow: -30px 17px 30px -20px rgba(0,0,0,0.75);
+  -moz-box-shadow: -30px 17px 30px -20px rgba(0,0,0,0.75);  ;
 
 }
 
@@ -219,7 +220,6 @@ position: relative;
   padding: 5px;
   background-color: #fff;
   border-radius: 10px;
-  position: fixed;
 }
 
 .dashboarduserindicator{
@@ -270,4 +270,131 @@ position: relative;
     padding-left: 20%;
 
   }
+}
+
+.navbar-brand{
+  color:#028B2E;
+  font-size: 200%;
+}
+
+.userlistimage{
+  border-Radius: 10px;
+  margin-right: 5px; 
+  width: 30px;
+  height: 30px;
+}
+
+.goegOO{
+  padding: 0 !important;
+  background-color: transparent !important;
+}
+
+
+@media screen and (max-width: 320px) {
+  .signup-heading{
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .signup-heading > h5{
+    font-size: 15px;
+  }
+
+  .signup-heading > span{
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .signup-form{
+    width: 100%
+  }
+
+ .navbar-brand{
+  font-size: 100%;
+ }
+
+ .loginheader>h5{
+  font-size: 17px;
+ }
+
+ .loginheader>span{
+  font-size: 13px;
+ }
+
+ .loginOptions{
+  font-size: 10px;
+}
+
+.forgotpasswordheading>h6{
+  font-size: 1px;
+}
+
+.forgotpassordheading>h6{
+  font-size: 10px;
+}
+.forgotpassordheading{
+  font-size: 12px;
+}
+
+
+
+.dasboardbody{
+  font-size: 10px;
+  margin-left: 10px;
+  background-color: #f1f1f2;
+}
+
+.userlistbody{
+  font-size: 10px;
+  margin-left: 18px;
+  background-color: #f1f1f2;
+ 
+}
+
+.userprofilebody{
+  font-size: 10px;
+  margin-left: 18px;
+  background-color: #f1f1f2;
+}
+
+.dashboardbotton{
+  font-size: 10px;
+}
+
+.userlistimage{
+  width: 50%;
+}
+
+.d-line-flex>img{
+  width: 30px;
+  height: 30px;
+}
+
+.hi{
+  font-size: 10px;
+  background-color: transparent;
+}
+
+.userlistheader{
+  flex-direction: column;
+}
+
+.usereprofileheader{
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+}
+.programmeattended{
+  font-size: 60%;
+  margin-left: 18px;
+}
+
+.searchinput{
+  width: 200px;
+  margin: 0;
+}
+
+.schedulebody{
+  margin-left: 10px;
+}
 }

@@ -1,12 +1,14 @@
 import React from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
+import {CDBInput , CDBIcon} from "cdbreact";
+
 
 export default function ForgetPassword() {
   return (
     <body className="signUP__body">
       <div className="row">
-        <div className="col-12 col-md-5">
+        <div className="col-12 col-md-5 forgotpassordheading">
           <Navbar />
           <br />
           <h5>Forgot your password?</h5>
@@ -15,11 +17,7 @@ export default function ForgetPassword() {
             instruction to reset your password.
           </h6>
           <br />
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Your Email"
-            width="80%"
+          <CDBInput type="email" placeholder="Your Email" icon={<CDBIcon icon="envelope" style={{marginBottom:"15px"}}/>}
           />
           <br />
 

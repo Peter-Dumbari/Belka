@@ -13,7 +13,7 @@ export default function ForgetPassword() {
           <h5>Forgot your password?</h5>
           <h6>
             Enter the email associated with your account and we will send an
-            instruction to reset your password.
+            instruction to reset your password
           </h6>
           <br />
           <input
@@ -55,7 +55,7 @@ export default function ForgetPassword() {
             <div class="col-4 mb-3">
               <img
                 src="https://th.bing.com/th/id/R.68f0e50ba88bbd81ba0f753aa7079e08?rik=kXiqJXxBrxePqw&riu=http%3a%2f%2fwww.gettingsmart.com%2fwp-content%2fuploads%2f2017%2f02%2fDiverse-students-using-digital-content-on-their-tablets-in-a-library-Feature-Image.jpg&ehk=oRSdwW60Gdw8iJ1wBoP466nMXG7xYH6ZV0cBbXdNKPA%3d&risl=&pid=ImgRaw&r=0"
-                alt=""
+                alt="/"
                 width="150%"
                 style={{ borderRadius: "10%" }}
               />
@@ -65,7 +65,7 @@ export default function ForgetPassword() {
             <div class="col-4 mb-3">
               <img
                 src="https://th.bing.com/th/id/R.92805b56d6adc5c33136f8204a5dde00?rik=CwxB9ouupSAqAQ&pid=ImgRaw&r=0"
-                alt=""
+                alt="/"
                 width="150%"
                 style={{ borderRadius: "10%" }}
               />
@@ -75,7 +75,7 @@ export default function ForgetPassword() {
             <div class="col-4 mb-3">
               <img
                 src="https://th.bing.com/th/id/R.f635a1e91ed419316eabc75a17c49bfc?rik=mXynZnNMHmSUmg&pid=ImgRaw&r=0"
-                alt=""
+                alt="/"
                 width="150%"
                 style={{ borderRadius: "10%" }}
               />

@@ -52,10 +52,10 @@ export default function UserLists() {
  
 
   return (
-    <body style={{ backgroundColor: "#f1f1f2", height: "100vh"}} >
+    <body style={{ backgroundColor: "#f1f1f2", height: "100vh"}}>
       <Sidebar />
-      <div className="container-fluid">
-        <div className="d-flex mb-3">
+      <div className="container-fluid userlistbody">
+        <div className="d-flex mb-3 userlistheader">
           <div className="me-auto p-2">
             <h3>Users List </h3>
           </div>
@@ -64,6 +64,7 @@ export default function UserLists() {
               <CDBInput
                 placeholder="Search User"
                 type="search"
+                className="searchinput"
                 icon={
                   <i
                     style={{ color: "gray" }}
@@ -101,13 +102,11 @@ export default function UserLists() {
                   key={users.id}
                 >
                   <td>
-                    <span className="d-inline-flex">
+                    <span className="d-inline">
                       <img
                         src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
                         alt=""
-                        style={{ borderRadius: "10px", marginRight: "5px", width: "20px", height: "20px" 
-                      }}
-                      className="d-col-1"
+                      className="d-col-1 userlistimage"
                       />
                       <span>{users.name}</span>
                     </span>
@@ -126,7 +125,7 @@ export default function UserLists() {
                       {users.gender}
                     </span>
                   </td>
-                  <td style={{ cursor: "pointer", fontWeight: "bold" }}>
+                  <td style={{ cursor: "pointer", fontWeight: "bold"}}>
                     {
                       <CDBContainer>
                         <CDBBox>
@@ -136,7 +135,6 @@ export default function UserLists() {
                                 className="text-muted"
                                 fas
                                 icon="ellipsis-h"
-                                style={{ backgroundColor: "transparent" }}
                               />
                             </CDBDropDownToggle>
                             <CDBDropDownMenu className="hi">
@@ -190,12 +188,14 @@ export default function UserLists() {
                   key={users.id}
                 >
                   <td>
-                    <span className="d-inline-flex">
+                    <span className="d-inline">
                       <img
                         src="https://th.bing.com/th/id/R.d268b238932809e18b85a7820184220f?rik=ahExR0U%2fu2zHyQ&riu=http%3a%2f%2ficon-library.com%2fimages%2fno-profile-picture-icon%2fno-profile-picture-icon-2.jpg&ehk=4X8pLfMkepeJcdTMZ8L033nQ2hfH0gJN3qGTpg62g00%3d&risl=&pid=ImgRaw&r=0"
                         alt=""
                         width="20px"
                         style={{ borderRadius: "10px", marginRight: "5px" }}
+                        className="d-col-1 userlistimage"
+
                       />
                       <span>{users.name}</span>
                     </span>
@@ -271,7 +271,7 @@ export default function UserLists() {
               </tbody>
             </table>
           </div>
-          <div className="col-10 col-md-4 mb-3" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
+          <div className="col-12 col-md-4 mb-3" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
             <form action="">
             <div>
                 <center>

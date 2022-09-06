@@ -6,19 +6,19 @@ import { NewRegistration } from "./NewRegistration";
 
 export default function Dashboard() {
   return (
-    <body style={{backgroundColor: "#f1f1f2"}}>
+    <body>
       <Sidebar />
-      <div  className="container-fluid">
+      <div  className="container-fluid dasboardbody pd-5" >
         <div className="col">
           <div className="d-flex " style={{marginBottom: "2%"}}>
             <div className="me-auto p-2">
               <h3 style={{fontFamily: 'Poppins'}}>Dashboard</h3>
             </div>
             <div className="p-2">
-              <button className="btn btn-success">10-06-2021</button>
+              <button className="btn btn-success col-sm-12 col-md-8 col-lg-12 dashboardbotton">10-06-2021</button>
             </div>
             <div className="p-2">
-              <button className="btn btn-success">10-06-2021</button>
+              <button className="btn btn-success col-sm-12 col-md-8 col-lg-12 dashboardbotton">10-06-2021</button>
             </div>
           </div>
         </div>

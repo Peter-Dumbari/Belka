@@ -13,7 +13,7 @@ export default function LoginPage() {
       <div className="row">
         <div className="col-12 col-md-5">
           <Navbar />
-          <div style={{ marginTop: "7%" }}>
+          <div className="loginheader" style={{ marginTop: "7%" }}>
             <h5>Sign Up for Belka Admin</h5>
             <span>
               Dont have an account?
@@ -47,8 +47,8 @@ export default function LoginPage() {
                 </button>
               </Link>
               <center style={{ width: "65%" }}>
-                <div class="d-flex mb-3">
-                  <div class="me-auto p-2">
+                <div class="d-flex mb-3 loginOptions">
+                  <div class="me-auto p-2 ">
                     <input class="form-check-input" type="checkbox" value="" />
                     <label htmlFor="">Remember Me</label>
                   </div>
@@ -90,6 +90,7 @@ export default function LoginPage() {
                           src={facebooklogo}
                           width="30px"
                           height="30px"
+                          alt=""
                         ></img>
                         <p
                           style={{
@@ -108,13 +109,14 @@ export default function LoginPage() {
                           border: "solid 1px",
                         }}
                       >
-                        <img src={googlelogo} width="30px" height="30px"></img>
+                        <img src={googlelogo} width="30px" alt="" height="30px"></img>
                         <p
                           style={{
                             color: "#000",
                             fontSize: "80%",
                             fontWeight: "bold",
                           }}
+
                         >
                           SignUp with Google
                         </p>
@@ -130,7 +132,7 @@ export default function LoginPage() {
           <img
             src={LoginImage}
             alt=""
-            width="70%"
+            className="col-12 col-md-7 col-lg-7"
             style={{ marginTop: "10%" }}
           />
         </div>

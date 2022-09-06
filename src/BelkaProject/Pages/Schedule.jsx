@@ -39,8 +39,8 @@ export default function Schedule() {
     <>
       <Sidebar />
       <body
-        className="container-fluid"
-        style={{ backgroundColor: "#f1f1f2", height: "100vh" }}
+        className="container-fluid schedulebody"
+        style={{ backgroundColor: "#f1f1f2" }}
       >
         <h4>Schedule/Program</h4>
         <div className="d-flex justify-content-end">
@@ -166,7 +166,7 @@ export default function Schedule() {
             </div>
           </div>
           <div
-            className="col-12 col-md-11 col-lg-8  mb-5 mt-5"
+            className="col-11 col-md-11 col-lg-8  mb-5 mt-5"
             style={{ backgroundColor: "#fff", borderRadius: "10px" }}
           >
             <Calendar onChange={onChange} value={value} className="kalistus" />

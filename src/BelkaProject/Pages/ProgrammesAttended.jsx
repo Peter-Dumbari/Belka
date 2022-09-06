@@ -22,9 +22,9 @@ export default function ProgrammesAttended() {
   return (
     <>
       <Sidebar />
-      <div className="container-fluid">
+      <div className="container-fluid programmeattended">
         <div className="d-flex ">
-          <div className="me-auto p-2">
+          <div className="me-auto p-2 userprofilename">
             <h3 style={{ fontFamily: "Poppins" }}>User Profile</h3>
           </div>
           <div style={{ marginTop: "12px", width: "40%",}}>
@@ -45,7 +45,9 @@ export default function ProgrammesAttended() {
         <span className="d-flex flex-row-reverse" style={{ fontWeight: "bold", width:"100%", fontSize: "75%"}}>
               Registered on the 09 December, 2022
             </span>
-            <table className="table table-striped table-hover" style={{fontSize: "75%"}}>
+
+            <div className="table-responsive">
+            <table className="table table-striped table-hover">
         <thead>
             <tr>
                 <th>Ticket  no</th>
@@ -75,6 +77,7 @@ export default function ProgrammesAttended() {
             </tr>
         </tbody>
       </table>
+            </div>
       </div>
     </>
   );

@@ -23,7 +23,7 @@ export default function CreateSchedule() {
       <Sidebar />
       <body
         className="container-fluid"
-        style={{ backgroundColor: "#f1f1f2", height: "100vh" }}
+        style={{ backgroundColor: "#f1f1f2" }}
       >
         <div className="d-flex ">
           <div className="me-auto p-2">

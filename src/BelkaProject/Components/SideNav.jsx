@@ -13,15 +13,15 @@ import "../../App.css"
 
 const Sidebar = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial', position:"absolute",}}>
-      <CDBSidebar textColor="#333" backgroundColor="#ffff" style={{position: "sticky"}}>
+    <div style={{ display: 'flex', height: '100vh', overflow: 'scroll initial', position:"absolute"}}>
+      <CDBSidebar textColor="#333" backgroundColor="#ffff" style={{position: "fixed"}}>
         <CDBSidebarHeader prefix={<i style={{color: "#028B2E"}} className="fa fa-bars fa-large"></i>}>
           <a href="/" className="text-decoration-none" style={{ color:  "#028B2E" , fontWeight: "bold", fontSize: "120%"}}>
           BELKA Admin
           </a>
         </CDBSidebarHeader>
 
-        <CDBSidebarContent className="sidebar-content" style={{marginRight: "25%"}}>
+        <CDBSidebarContent className="sidebar-content" >
           <CDBSidebarMenu>
             <NavLink exact to="/dashboard" activeClassName="activeClicked">
                <CDBSidebarMenuItem icon="columns">Dashboard</CDBSidebarMenuItem>
