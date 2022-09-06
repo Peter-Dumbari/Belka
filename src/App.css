@@ -287,6 +287,8 @@ position: relative;
 .goegOO{
   padding: 0 !important;
   background-color: transparent !important;
+  background: transparent;
+  border: none;
 }
 
 
