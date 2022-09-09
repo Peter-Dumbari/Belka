@@ -22,11 +22,11 @@ export default function CreateSchedule() {
     <>
       <Sidebar />
       <body
-        className="container-fluid"
+        className="container-fluid create-schedule-container"
         style={{ backgroundColor: "#f1f1f2" }}
       >
-        <div className="d-flex ">
-          <div className="me-auto p-2">
+        <div className="d-flex">
+          <div className="me-auto p-2 create-schedule-header">
             <h3 style={{ fontFamily: "Poppins" }}>Create Schedule/Program</h3>
           </div>
           <div style={{ marginTop: "12px", width: "40%" }}>
@@ -59,13 +59,13 @@ export default function CreateSchedule() {
               style={{ backgroundColor: "#d7ebe0", borderRadius: "10px",  marginBottom :"1%"}}
             >
               <div class="col-3">
-                <button className="btn btn-success" style={{ width: "100%" }}>
+                <button className="btn btn-success create-schedule-button create-button-active" style={{ width: "100%" }}>
                   Program
                 </button>
               </div>
               <div class="col-3">
                 <button
-                  className="btn btn-outline"
+                  className="btn btn-outline create-schedule-button"
                   disabled
                   style={{ width: "100%" }}
                 >
@@ -74,7 +74,7 @@ export default function CreateSchedule() {
               </div>
               <div class="col-3">
                 <button
-                  className="btn btn-outline"
+                  className="btn btn-outline create-schedule-button"
                   disabled
                   style={{ width: "100%" }}
                 >
@@ -207,7 +207,7 @@ export default function CreateSchedule() {
                     <div className="modal-footer-centered">
                       <button
                         type="button"
-                        className="btn btn-success"
+                        className="btn btn-success create-schedule-button"
                         data-bs-dismiss="modal"
                         style={{width: "20%"}}
                       >
@@ -218,7 +218,7 @@ export default function CreateSchedule() {
                 </div>
               </div>
               <button
-                className="btn btn-success"
+                className="btn btn-success create-schedule-control-button"
                 style={{ width: "20%", marginRight: "10px", marginTop :"1%" }}
 
               >
@@ -226,7 +226,7 @@ export default function CreateSchedule() {
               </button>
               <button
                 type="button"
-                class="btn btn-success"
+                class="btn btn-success create-schedule-control-button"
                 data-bs-toggle="modal"
                 data-bs-target="#exampleModal"
                 style={{ width: "20%",  marginTop :"1%" }}

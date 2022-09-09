@@ -6,19 +6,20 @@ export default function AcademicClassAssignment() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid"style={{backgroundColor: "#f1f1f2", height: "100vh"}}>
+      <body className="container-fluid academicclass-assignment"style={{backgroundColor: "#f1f1f2", height: "100vh"}}>
         <div className="d-flex " style={{ marginBottom: "2%" }}>
-          <div className="me-auto p-2">
+          <div className="me-auto p-2 academicclass-assignment-header">
             <h3 style={{ fontFamily: "Poppins" }}>File Manager</h3>
           </div>
           <div className="p-2">
-            <button className="btn btn-success">
+            <button className="btn btn-success academicclass-assignment-button">
               Academic Class Assignment
             </button>
           </div>
         </div>
+        <div className="table-responsive">
         <table
-          className="table  table-borderless"
+          className="table  table-borderless academicclassassignment-table"
           style={{ color: "#484848" }}
         >
           <thead style={{ color: "#484848" }}>
@@ -69,6 +70,7 @@ export default function AcademicClassAssignment() {
             </tr>
           </tbody>
         </table>
+        </div>
       </body>
     </>
   );

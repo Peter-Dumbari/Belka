@@ -7,8 +7,8 @@ export default function FIlemanager() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid">
-        <div className="mt-2" style={{ color: "#484848", fontWeight: "bold" }}>
+      <body className="container-fluid filemanager-container">
+        <div className="mt-2 filemanager-header" style={{ color: "#484848", fontWeight: "bold" }}>
           <h5>File Manager</h5>
         </div>
         <div
@@ -20,7 +20,7 @@ export default function FIlemanager() {
             marginBottom: "0",
           }}
         >
-          <button className="btn btn-success" style={{ fontWeight: "bold" }}>
+          <button className="btn btn-success filemanager-addfolder-button" style={{ fontWeight: "bold" }}>
             + Add New Folder
           </button>
         </div>
@@ -216,7 +216,7 @@ export default function FIlemanager() {
                       </thead>
                       <tbody>
                         <tr style={{ color: "#028B2E" }}>
-                          <div className="d-inline text-center">
+                          <div className="d-inline-flex text-center">
                             <img
                               src="https://bruinlife.s3.us-west-1.amazonaws.com/wp-content/uploads/2018/05/02172507/2B8_5802.jpg"
                               className="folderpicture"

@@ -45,29 +45,29 @@ export default function Schedule() {
         <h4>Schedule/Program</h4>
         <div className="d-flex justify-content-end">
           <button
-            className="btn btn-outline-success col-2 col-md-2  "
+            className="btn btn-outline-success col-2 col-md-2 calendarbuttons  "
             style={{ marginRight: "20px" }}
           >
             Day
           </button>
           <button
-            className="btn btn-outline-success col-2 col-md-2"
+            className="btn btn-outline-success col-2 col-md-2 calendarbuttons"
             style={{ marginRight: "20px" }}
           >
             Week
           </button>
           <button
-            className="btn btn-outline-success col-2 col-md-2"
+            className="btn btn-outline-success col-2 col-md-2 calendarbuttons"
             style={{ marginRight: "20px" }}
           >
             Month
           </button>
-          <button className="btn btn-outline-success col-2 col-md-2">
+          <button className="btn btn-outline-success col-2 col-md-2 calendarbuttons">
             Year
           </button>
         </div>
 
-        <div className="row">
+        <div className="row schedulec">
           <div
             className="col-11   col-lg-3   col-md-8  0ffset-md-1    p-3 mt-5 mb-2"
             style={{
@@ -77,14 +77,14 @@ export default function Schedule() {
               borderRadius: "10px",
             }}
           >
-            <div className="mt-5" style={{ textAlign: "center" }}>
+            <div className="mt-5 schedule-upper-buttons" style={{ textAlign: "center" }}>
               <Link to="/createschedule" style={{ textDecoration: "none" }}>
-                <button className="btn btn-success mb-3 col-10 col-md-11 ">
+                <button className="btn btn-success mb-3 col-10 col-md-11 schedule-upper-buttons">
                   + Create Schedule/Programme
                 </button>
               </Link>
               <Link to="/scheduleeventlist" style={{ textDecoration: "none" }}>
-                <button className="btn btn-success">
+                <button className="btn btn-success schedule-upper-buttons">
                   {" "}
                   Schedule/Event List
                 </button>
@@ -166,7 +166,7 @@ export default function Schedule() {
             </div>
           </div>
           <div
-            className="col-11 col-md-11 col-lg-8  mb-5 mt-5"
+            className="col-11 col-md-11 col-lg-8  mb-5 mt-5 schedulecalendar"
             style={{ backgroundColor: "#fff", borderRadius: "10px" }}
           >
             <Calendar onChange={onChange} value={value} className="kalistus" />

@@ -8,7 +8,7 @@ export default function AdminProfile() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid">
+      <body className="container-fluid admin-profile-container">
         <div className="mt-2" style={{ color: "#484848", fontWeight: "bold" }}>
           <h5>Admin Profile</h5>
         </div>
@@ -22,10 +22,10 @@ export default function AdminProfile() {
           }}
         >
           <div class="p-2">
-            <CDBIcon icon="envelope" />
+            <CDBIcon icon="envelope" className="adminprofile-icon"/>
           </div>
           <div class="p-2">
-            <CDBIcon icon="comment-alt" />
+            <CDBIcon icon="comment-alt" className="adminprofile-icon"/>
           </div>
         </div>
         <div className="row" style={{ marginTop: "-10px" }}>
@@ -35,6 +35,7 @@ export default function AdminProfile() {
               alt=""
               width="100%"
               style={{ borderRadius: "10px", position: "relative" }}
+              className="admin-background-image"
             />
             <h4
               className="mt-3 text-center"
@@ -86,7 +87,8 @@ export default function AdminProfile() {
                 <img
                   src={Image}
                   alt=""
-                  style={{ width: "390px", marginBottom: "10px" }}
+                  style={{ marginBottom: "10px" }}
+                  className="admin-profile-background-image"
                 />
               </div>
               <div

@@ -65,25 +65,25 @@ export default function HighSchoolAssistance() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid">
+      <body className="container-fluid high-school-assistance-container">
         <div className="d-flex " style={{ marginBottom: "2%" }}>
-          <div className="me-auto p-2">
+          <div className="me-auto p-2  highschoolassistance-header">
             <h3 style={{ fontFamily: "Poppins" }}>File Manager</h3>
           </div>
           <div className="p-2">
-            <button className="btn btn-success">High School Assignment</button>
+            <button className="btn btn-success high-school-assignment-button">High School Assignment</button>
           </div>
         </div>
         <div className="d-flex " style={{ marginBottom: "2%" }}>
-          <div className="me-auto p-2">
+          <div className="me-auto p-2 highschoolassistance">
             <div className="d-inline-flex">
               <button
-                className="btn btn-success"
+                className="btn btn-success highschoolassignment-button"
                 style={{ marginRight: "8px" }}
               >
                 10-06-2021 <CDBIcon icon="play" style={{ rotate: "90deg" }} />{" "}
               </button>
-              <button className="btn btn-success">
+              <button className="btn btn-success highschoolassignment-button">
                 10-06-2021 <CDBIcon icon="play" style={{ rotate: "90deg" }} />
               </button>
             </div>
@@ -104,6 +104,8 @@ export default function HighSchoolAssistance() {
             />
           </div>
         </div>
+        <div className="table-responsive">
+          
         <table className="table  table-hover" style={{ color: "#484848" }}>
           <thead style={{ color: "#484848" }}>
             <tr>
@@ -186,6 +188,7 @@ export default function HighSchoolAssistance() {
                 })}
           </tbody>
         </table>
+        </div>
       </body>
     </>
   );

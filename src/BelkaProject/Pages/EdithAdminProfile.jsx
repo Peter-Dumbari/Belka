@@ -6,14 +6,14 @@ export default function EdithAdminProfile() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid">
+      <body className="container-fluid edith-admin-profile-container">
         <div className="d-flex ">
-          <div className="me-auto p-2">
+          <div className="me-auto p-2 edith-admin-profile-header">
             <h3 style={{ fontFamily: "Poppins" }}>Admin Profile</h3>
           </div>
           <div style={{ marginTop: "12px"}}>
             <button
-              className="btn btn-success"
+              className="btn btn-success edith-admin-profile-button"
               disabled
               style={{ width: "100%" }}
             >
@@ -23,15 +23,15 @@ export default function EdithAdminProfile() {
         </div>
         <div className="row">
           <div className="col-11 col-md-10 col-lg-3 mb-3">
-          <div className="mt-4" style={{ position: "relative" }}>
+          <div className="mt-4 edited_image-container" style={{ position: "relative" }}>
               <img
                 src="https://th.bing.com/th/id/R.daced5c5d9871280ca8e2de03bf8bee5?rik=sUyBpUyNvR6IqQ&pid=ImgRaw&r=0"
                 alt=""
-                width="100%"
                 style={{ borderRadius: "10px", position: "relative" }}
+                className="edited-image-sample"
               />
               <label htmlFor="file">
-              <span class="position-absolute top-0 start-100 translate-middle btn btn-success pr-5 pl-5 pt-2  text-center" style={{borderRadius: "200px" }}>
+              <span class="position-absolute top-0 start-100 translate-middle btn btn-success pr-5 pl-5 pt-2  text-center edith-batch-plus" style={{borderRadius: "200px" }}>
                 <h5>+</h5>
               </span>
               </label>
@@ -114,12 +114,12 @@ export default function EdithAdminProfile() {
                 style={{ width: "100%", marginTop: "50px" }}
               >
                 <button
-                  className="btn btn-success"
+                  className="btn btn-success edit-admin-cancel-button"
                   style={{ width: "20%", marginRight: "5px" }}
                 >
                   Cancel
                 </button>
-                <button className="btn btn-success" style={{ width: "20%" }}>
+                <button className="btn btn-success edit-admin-save-button" style={{ width: "20%" }}>
                   Save
                 </button>
               </div>

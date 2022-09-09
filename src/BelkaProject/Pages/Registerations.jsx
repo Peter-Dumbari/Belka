@@ -55,9 +55,9 @@ export default function Registerations() {
     <>
       <Sidebar />
       <body style={{ backgroundColor: "#f1f1f2", paddingRight: "6px" }}>
-        <div className="container-fluid">
+        <div className="container-fluid registration-body">
           <div className="d-flex ">
-            <div className="me-auto p-2">
+            <div className="me-auto p-2 registration-header">
               <h3 style={{ fontFamily: "Poppins" }}>Registrations</h3>
             </div>
             <div style={{ marginTop: "12px", width: "40%" }}>
@@ -85,7 +85,7 @@ export default function Registerations() {
                 marginLeft: "20px",
               }}
             >
-              <h5 className="mb-3" style={{ textAlign: "center" }}>
+              <h5 className="mb-3 registration-table-header" style={{ textAlign: "center" }}>
                 Filter
               </h5>
               <Calendar onChange={onChange} value={value} />
@@ -133,14 +133,14 @@ export default function Registerations() {
                 <div className="d-inline-flex p-2" style={{ width: "100%" }}>
                   <button
                     type="button"
-                    className="btn btn-success m-2"
+                    className="btn btn-success m-2 registration-control-button"
                     style={{ width: "45%" }}
                   >
                     Cancel
                   </button>
                   <button
                     type="button"
-                    className="btn btn-success m-2"
+                    className="btn btn-success m-2 registration-control-button"
                     style={{ width: "45%" }}
                   >
                     Apply
@@ -153,8 +153,9 @@ export default function Registerations() {
               className="col-lg-7 col-md-11 col-sm-11 p-3 mb-3 mt-3"
               style={{ backgroundColor: "#fff", borderRadius: "10px" }}
             >
+              <div className="table-responsive">
               <table
-                className="table table-striped table-hover  text-center"
+                className="table table-striped table-hover  text-center registration-table"
                 style={{ fontSize: "85%" }}
               >
                 <thead style={{ color: "#484848" }}>
@@ -180,6 +181,7 @@ export default function Registerations() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Sidebar from "../Components/SideNav";
-import { CDBIcon, CDBSelect, } from "cdbreact";
+import { CDBIcon, CDBSelect } from "cdbreact";
 import Calendar from "react-calendar";
 import { Link } from "react-router-dom";
 
@@ -8,25 +8,28 @@ export default function EventList() {
   const [value, onChange] = useState(new Date());
   const [option] = useState([
     {
-      text: 'Mobile Computer Lab',
-      value: '1'
+      text: "Mobile Computer Lab",
+      value: "1",
     },
     {
-      text: 'Option 2',
-      value: '2'
+      text: "Option 2",
+      value: "2",
     },
     {
-      text: 'Option 3',
-      value: '3'
+      text: "Option 3",
+      value: "3",
     },
-  ])
+  ]);
 
   return (
     <>
       <Sidebar />
-      <body className="container-fluid" style={{ backgroundColor: "#f1f1f2", height: "100vh" }}>
-        <div className="d-flex ">
-          <div className="me-auto p-2">
+      <body
+        className="container-fluid scheduleevent"
+        style={{ backgroundColor: "#f1f1f2"}}
+      >
+        <div className="d-flex eventlistcontainer">
+          <div className="me-auto p-2 eventllist">
             <h3 style={{ fontFamily: "Poppins" }}>Schedule/Program List</h3>
           </div>
           <div style={{ marginTop: "12px", width: "40%" }}>
@@ -38,8 +41,16 @@ export default function EventList() {
               }}
             >
               <span className="d-flex p-2" style={{ color: "#fff" }}>
-                 <CDBSelect options={option} selected="Choose an Option" style={{width: "100%", backgroundColor: "#028B2E", color: "#fff", fontWeight: "bold"}}/>
-
+                <CDBSelect
+                  options={option}
+                  selected="Choose an Option"
+                  style={{
+                    width: "100%",
+                    backgroundColor: "#028B2E",
+                    color: "#fff",
+                    fontWeight: "bold",
+                  }}
+                />
               </span>
             </div>
           </div>
@@ -47,16 +58,21 @@ export default function EventList() {
         <div className="row">
           <div
             className="col-11  col-lg-3  col-md-10   bg-light pt-2  mb-5 mt-3"
-            style={{ textAlign: "center", marginLeft: "20px", marginRight: "20px", borderRadius: "10px" }}
+            style={{
+              textAlign: "center",
+              marginLeft: "20px",
+              marginRight: "20px",
+              borderRadius: "10px",
+            }}
           >
-            <Link to="/createschedule" style={{textDecoration: "none"}}>
-            <button className="btn btn-success">
-              + Create Schedule/Program
-            </button>
+            <Link to="/createschedule" style={{ textDecoration: "none" }}>
+              <button className="btn btn-success create_schedule-programme_btn">
+                + Create Schedule/Program
+              </button>
             </Link>
             <div
               className="p3 mt-3"
-              style={{ marginBottom: "50px",outlineStyle: "dotted" }}
+              style={{ marginBottom: "50px", outlineStyle: "dotted" }}
             >
               <Calendar
                 onChange={onChange}
@@ -99,104 +115,106 @@ export default function EventList() {
               </div>
             </div>
           </div>
-          <div className=" col-11 col-lg-8  col-md-12 mt-2 p-3 bg-light m-3" style={{borderRadius:"10px"}}>
-            <table
-              className="table table-striped table-hover"
-              style={{ fontSize: "80%" }}
-            >
-              <thead style={{ color: "#484848"}}>
-                <tr>
-                  <th>
-                    <input type="checkbox" name="" id="" />
-                  </th>
-                  <th>
-                    <div className="d-line-flex">
-                      Date{" "}
-                      <CDBIcon
-                        icon="play"
-                        style={{ rotate: " 90deg", fontSize: "10px" }}
-                      />
-                    </div>
-                  </th>
-                  <th>
-                    <div className="d-line-flex">
-                      Time{" "}
-                      <CDBIcon
-                        icon="play"
-                        style={{ rotate: " 90deg", fontSize: "10px" }}
-                      />
-                    </div>
-                  </th>
-                  <th>
-                    <div className="d-line-flex">
-                      Location{" "}
-                      <CDBIcon
-                        icon="play"
-                        style={{ rotate: " 90deg", fontSize: "10px" }}
-                      />
-                    </div>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <input type="checkbox" name="" id="" />
-                  </td>
-                  <td>
-                    <div me="d-line-flex">
-                      <CDBIcon icon="calendar" style={{ color: "#028B2E" }} />3
-                      Dec, 2022{" "}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="d-line-flex">
-                      <CDBIcon icon="clock" style={{ color: "#028B2E" }} />
-                      10.15AM
-                    </div>
-                  </td>
-                  <td>
-                    <div
-                      className="d-line-flex"
-                      style={{
-                        color: "#028B2E",
-                        padding: "5px",
-                        borderRadius: "10px",
-                        backgroundColor: "#c5e6d2",
-                        textAlign: "center",
-                        width: "70%",
-                      }}
-                    >
-                      <CDBIcon icon="map-marker" />
-                      king West Village{" "}
-                    </div>
-                  </td>
-                  <td>
-                    <div className="d-line-flex">
-                      <CDBIcon
-                        icon="pen"
+          <div
+            className=" col-11 col-lg-8  col-md-12 mt-2 p-3 bg-light m-3"
+            style={{ borderRadius: "10px" }}
+          >
+            <div className="table-responsive">
+              <table className="table table-striped table-hover eventlisttable">
+                <thead style={{ color: "#484848" }}>
+                  <tr>
+                    <th>
+                      <input type="checkbox" name="" id="" />
+                    </th>
+                    <th>
+                      <div className="d-line-flex">
+                        Date{" "}
+                        <CDBIcon
+                          icon="play"
+                          style={{ rotate: " 90deg", fontSize: "10px" }}
+                        />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="d-line-flex">
+                        Time{" "}
+                        <CDBIcon
+                          icon="play"
+                          style={{ rotate: " 90deg", fontSize: "10px" }}
+                        />
+                      </div>
+                    </th>
+                    <th>
+                      <div className="d-line-flex">
+                        Location{" "}
+                        <CDBIcon
+                          icon="play"
+                          style={{ rotate: " 90deg", fontSize: "10px" }}
+                        />
+                      </div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="" id="" />
+                    </td>
+                    <td>
+                      <div me="d-line-flex">
+                        <CDBIcon icon="calendar" style={{ color: "#028B2E" }} />
+                        3 Dec, 2022{" "}
+                      </div>
+                    </td>
+                    <td>
+                      <div className="d-line-flex">
+                        <CDBIcon icon="clock" style={{ color: "#028B2E" }} />
+                        10.15AM
+                      </div>
+                    </td>
+                    <td>
+                      <div
+                        className="d-line-flex"
                         style={{
-                          marginRight: "20px",
                           color: "#028B2E",
+                          padding: "5px",
+                          borderRadius: "10px",
                           backgroundColor: "#c5e6d2",
-                          padding: "5px",
-                          borderRadius: "10px",
+                          textAlign: "center",
+                          width: "70%",
                         }}
-                      />
-                      <CDBIcon
-                        icon="trash"
-                        style={{
-                          color: "#d66d80",
-                          padding: "5px",
-                          borderRadius: "10px",
-                          backgroundColor: "#e6c5c7",
-                        }}
-                      />
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                      >
+                        <CDBIcon icon="map-marker" />
+                        king West Village{" "}
+                      </div>
+                    </td>
+                    <td>
+                      <div className="d-line-flex">
+                        <CDBIcon
+                          icon="pen"
+                          style={{
+                            marginRight: "20px",
+                            color: "#028B2E",
+                            backgroundColor: "#c5e6d2",
+                            padding: "5px",
+                            borderRadius: "10px",
+                          }}
+                        />
+                        <CDBIcon
+                          icon="trash"
+                          style={{
+                            color: "#d66d80",
+                            padding: "5px",
+                            borderRadius: "10px",
+                            backgroundColor: "#e6c5c7",
+                          }}
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </body>

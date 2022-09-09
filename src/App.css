@@ -291,8 +291,16 @@ position: relative;
   border: none;
 }
 
+.admin-profile-background-image{
+  width: 396px;
+}
 
-@media screen and (max-width: 320px) {
+
+.edited-image-sample{
+  width: 100%;
+}
+
+@media screen and (max-width: 450px) {
   .signup-heading{
     width: 100%;
     margin-top: 0;
@@ -397,6 +405,235 @@ position: relative;
 }
 
 .schedulebody{
+  margin-left: 15px;
+}
+
+.schedulebody>h4{
+  font-size: 20px;
+}
+.schedulecalendar{
+  margin-left: 6px;
+  padding: 5px;
+  
+}
+
+.schedule-upper-buttons{
+  font-size: 10px;
+  padding: 3px;
+}
+
+.form-select{
+  font-size: 10px; 
+}
+
+.calendarbuttons{
+  border: none;
+  font-size: 10px;
+  padding: 3px;
+}
+
+.scheduleevent{
+  font-size: 10px;
+}
+
+.eventlisttable{
+  width: 200%;
+}
+
+.eventllist{
+  margin-left: 12px;
+  font-size: small;
+}
+.eventllist>h3{
+  font-size: 13px;
+}
+
+.eventllist>span{
+  font-size: 13px;
+}
+
+.create_schedule-programme_btn{
+  font-size: 10px;
+}
+
+.create-schedule-container{
+  margin-left: 20px;
+  font-size: 10px;
+}
+::placeholder{
+  font-size: 13px;
+}
+.create-schedule-header>h3{
+  font-size: 15px;
+}
+.create-schedule-button{
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+}
+
+.create-button-active{
+color: #028B2E;
+}
+
+.create-schedule-control-button{
+  padding: 5px;
+  font-size: 13px;
+}
+
+.registration-body{
+  margin-left: 12px;
+  font-size: 10px;
+}
+
+.registration-table{
+  width: 300%;
+}
+
+.registration-control-button{
+  padding: 3px;
+  font-size: 13px;
+}
+
+.registration-header>h3{
+  font-size: 20px;
+}
+
+.registration-table-header{
+  font-size: 13px;
+}
+
+.filemanager-container{
+  margin-left: 17px;
+  font-size: 10px;
+}
+
+.filemanager-header>h5{
+  font-size: 13px;
+}
+
+.filemanager-addfolder-button{
+  font-size: 10px;
+}
+
+.academicclass-assignment{
+  margin-left: 15px;
+  font-size: 10px;
+}
+
+.academicclassassignment-table{
+  width: 200%;
+}
+
+.academicclass-assignment-header>h3{
+  font-size: 13px;
+}
+
+.academicclass-assignment-button{
+  padding: 3px;
+  font-size: 10px;
+}
+
+.high-school-assistance-container{
+  margin-left: 30px;
+  font-size: 10px;
+}
+
+.trashcanIcon{
+  font-size: 15px;
+}
+
+.highschoolassistance{
+  flex-direction: row;
+}
+
+.highschoolassignment-button{
+  font-size: 10px;
+  padding: 3px;
+}
+
+.highschoolassignment-header{
+  margin-bottom: 10px;
+}
+
+.highschoolassistance-header>h3{
+  font-size: 15px;
+}
+
+.high-school-assignment-button{
+  padding: 5px;
+  font-size: 10px;
+}
+
+.admin-profile-container{
+  margin-left: 17px;
+  font-size: 10px;
+}
+
+.admin-profile-background-image{
+  width: 210px;
+  margin-top: 10px;
+}
+
+.adminprofile-icon{
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.edith-admin-profile-container{
+  margin-left: 17px;
+  font-size: 10px;
+}
+
+.edith-admin-profile-header>h3{
+  font-size: 20px;
+}
+
+.edith-admin-profile-button{
+  font-size: 10px;
+  padding: 5px;
+  width: 50%;
+}
+
+.edited_image-container{
+  width: 70%;
+  margin-left: 40px;
+}
+
+.edith-batch-plus{
+  padding:6px;
+}
+
+.edit-admin-cancel-button{
+  width: 100%;
+  margin-right: 15px;
+}
+
+.edit-admin-save-button{
+  font-size: 100%;
+}
+
+.edit-admin-cancel-button{
+  font-size: 10px;
+  padding: 5px;
+}
+
+.myteam_container{
   margin-left: 10px;
+  font-size: 10px;
+}
+
+.myteam-header>h3{
+  font-size: 15px;
+}
+
+.myteam-name-displaying-buton{
+  font-size: 11px;
+}
+
+.search-input-container{
+  padding: 2px;
+  border: none;
+  background-color: transparent;
 }
 }

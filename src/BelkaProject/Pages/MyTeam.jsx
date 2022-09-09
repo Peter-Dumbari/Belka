@@ -71,14 +71,14 @@ export default function MyTeam() {
   return (
     <>
       <Sidebar />
-      <body className="container-fluid">
+      <body className="container-fluid myteam_container">
         <div className="d-flex " style={{ marginBottom: "2%" }}>
-          <div className="me-auto p-2">
+          <div className="me-auto p-2 myteam-header">
             <h3 style={{ fontFamily: "Poppins" }}>Admin Profile</h3>
           </div>
 
           <div className="p-2">
-            <button className="btn btn-success" type="button">
+            <button className="btn btn-success myteam-name-displaying-buton" type="button">
               <span style={{ marginRight: "15px" }}>My Team</span>
               <CDBIcon
                 icon="play"
@@ -90,7 +90,7 @@ export default function MyTeam() {
         <div class="d-flex flex-row-reverse">
           <input
             type="search"
-            className="form-control"
+            className="form-control search-input-container"
             placeholder="Search"
             onChange={HandleSearch}
             value={item}
