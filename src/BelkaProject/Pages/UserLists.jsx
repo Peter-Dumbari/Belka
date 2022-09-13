@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "../Components/SideNav";
+import Pagefooter from "../Components/Pagefooter";
 import { Link } from "react-router-dom";
 import {
   CDBPane,
@@ -22,11 +23,35 @@ export default function UserLists() {
     {id:0, email: "dummty@gmail.com", name: "Peter Dumbari",  phoneNumber: "+38373938333", gender: "male"},
     {id:1, email: "dum@gmail.com", name: "Love Dumbari",  phoneNumber: "+38373938333", gender: "female"},
     {id:2, email: "pee@gmail.com", name: "Dumtee Dumbari",  phoneNumber: "+38373938333", gender: "male"},
-    {id:3, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "male"},
+    {id:3, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "female"},
+    {id:4, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "male"},
+    {id:5, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "female"},
+    {id:6, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "male"},
+    {id:7, email: "pee@pmail.com", name: "Lazkweb Peter",  phoneNumber: "+2348076787887", gender: "male"},
   ]
   const [dataSource, setDataSource ]= useState(datas)
   const[items, setItems] = useState("")
   const [tableFilter, setTableFilter] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage]= useState(5);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+
+  const currentPosts = dataSource.slice(indexOfFirstPost, indexOfLastPost);
+
+
+  const paginate = (number) => {
+    setCurrentPage(number);
+  };
+
+  const NextPage = () =>{
+    setCurrentPage(currentPage + 1)
+  }
+
+  const PreviousPage = () => {
+    setCurrentPage(currentPage -1)
+  }
 
   const handleDelete=(id)=>{
     setDataSource(dataSource.filter((items)=> items.id !== id))
@@ -35,7 +60,7 @@ export default function UserLists() {
   const filterDatas =(e)=>{
     if (e.target.value !==""){
       setItems(e.target.value);
-      const filterTable = dataSource.filter(o =>
+      const filterTable = currentPosts.filter(o =>
         Object.keys(o).some(k =>
           String(o[k])
             .toLocaleLowerCase()
@@ -50,11 +75,14 @@ export default function UserLists() {
     }
   }
  
+  useEffect(()=>{
+    console.log(dataSource.length)
+  },[])
 
   return (
     <body style={{ backgroundColor: "#f1f1f2", height: "100vh"}}>
       <Sidebar />
-      <div className="container-fluid userlistbody">
+      <div className="container-fluid userlistbody" style={{height: "auto"}}>
         <div className="d-flex mb-3 userlistheader">
           <div className="me-auto p-2">
             <h3>Users List </h3>
@@ -79,8 +107,8 @@ export default function UserLists() {
             </CDBContainer>
           </div>
         </div>
-        <div className="row">
-          <div className="col- 11 col-md-8 table-responsive"  style={{ marginTop: "-30px" }}>
+        <div className="row mb-5">
+          <div className="col- 11 col-md-8 col-lg-9 table-responsive"  style={{ marginTop: "-30px" }}>
             <table className="table table-hover " style={{ color: "#484848", }}>
               <thead>
                 <tr>
@@ -177,14 +205,9 @@ export default function UserLists() {
                 </tr>
                   )
                 }):
-                dataSource.map((users)=>{
-                  return(
+                currentPosts.map((users)=>(
                     <tr
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "15px",
-                    marginBottom: "2%",
-                  }}
+                  className="userlists-table-row"
                   key={users.id}
                 >
                   <td>
@@ -204,12 +227,7 @@ export default function UserLists() {
                   <td>{users.phoneNumber}</td>
                   <td>
                     <span
-                      style={{
-                        backgroundColor: "#e0f1f2",
-                        padding: "5px 15px 5px 15px",
-                        borderRadius: "10px",
-                        color: "#149FC8",
-                      }}
+                      className={users.gender === "male"? "male-gender-batch": "female-gender-batch"}
                     >
                       {users.gender}
                     </span>
@@ -266,12 +284,12 @@ export default function UserLists() {
                   </td>
                 </tr>
                   )
-                })
+                )
               }
               </tbody>
             </table>
           </div>
-          <div className="col-12 col-md-4 mb-3" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
+          <div className="col-12 col-md-4 col-lg-3 mt-5" style={{borderLeft: "1px solid", borderRadius:"10px 0 0 10px", borderColor: "#323333"}}>
             <form action="">
             <div>
                 <center>
@@ -279,7 +297,7 @@ export default function UserLists() {
                 </center>
                 <span>Year</span>
                 <div style={{ backgroundColor: "#e7eef0" }}>
-                  <div className="d-flex mb-3 p-3">
+                  <div className="d-flex mb-5 p-3">
                     <select
                       className="form-select me-auto p-2"
                       aria-label="Default select example"
@@ -303,7 +321,7 @@ export default function UserLists() {
                   </div>
                 </div>
                 <span>Age</span>
-                <div style={{ backgroundColor: "#e7eef0" }}>
+                <div style={{ backgroundColor: "#e7eef0"}} className="mb-3">
                   <CDBContainer>
                     <CDBSlider
                       value={value}
@@ -317,41 +335,41 @@ export default function UserLists() {
                   <div className="d-inline-flex p-2">
                     <div class="form-check m-3">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios1"
                         value="option1"
                       />
-                      <label class="form-check-label" for="exampleRadios1">
+                      <label className="form-check-label" for="exampleRadios1">
                         Male
                       </label>
                     </div>
-                    <div class="form-check m-3">
+                    <div className="form-check m-3">
                       <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         name="exampleRadios"
                         id="exampleRadios2"
                         value="option2"
                       />
-                      <label class="form-check-label" for="exampleRadios2">
+                      <label className="form-check-label" for="exampleRadios2">
                         Female
                       </label>
                     </div>
                   </div>
                 </div>
-                <div className="d-inline-flex p-2" style={{width: "100%"}}>
+                <div className="d-inline-flex p-2 mt-5" style={{width: "100%"}}>
                     <button type="button" className="btn btn-success m-2"style={{width: "45%", }}>Cancel</button>
                     <button type="button" className="btn btn-success m-2"style={{width: "45%"}}>Apply</button>
                   </div>
-                  <span>Performance</span>
-                  <PerformanceChart/>
+                 
               </div>
             </form>
           </div>
         </div>
       </div>
+      <Pagefooter postPerPage={postsPerPage} NextPage={NextPage} PreviousPage={PreviousPage} paginate={paginate} totalPosts={dataSource.length} currentPage={currentPage}/>
     </body>
   );
 }

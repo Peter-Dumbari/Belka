@@ -20,7 +20,7 @@
   width: 700px;
 }
 
-input {
+input[type=text] {
   margin-bottom: 2%;
   width: 50%;
 }
@@ -263,6 +263,13 @@ position: relative;
   .container-fluid{
     padding-left: 15%;
   }
+
+  .eventlisttable{
+    width:150%;
+  }
+  .pagination-container{
+    font-size: 80%;
+  }
 }
 
 @media screen and (max-width: 509px){
@@ -270,6 +277,7 @@ position: relative;
     padding-left: 20%;
 
   }
+
 }
 
 .navbar-brand{
@@ -438,11 +446,12 @@ position: relative;
 
 .eventlisttable{
   width: 200%;
+  font-size: 10px;
 }
 
 .eventllist{
   margin-left: 12px;
-  font-size: small;
+  font-size: medium;
 }
 .eventllist>h3{
   font-size: 13px;
@@ -636,4 +645,44 @@ color: #028B2E;
   border: none;
   background-color: transparent;
 }
+
+.pagination-container{
+  font-size: 10px;
 }
+}
+
+
+.page-link{
+  border: none;
+  background-color: transparent;
+  color: #484848;
+}
+
+.page-link.active{
+  background-color: #028B2E !important;
+  border-radius: 5px;
+}
+
+.activeClicked{
+  background-color: red !important;
+}
+
+.pagination-container{
+  width: 100%; 
+}
+
+.male-gender-batch{
+    background-color: #e0f1f2;
+    padding: 5px 15px 5px 15px;
+    border-radius: 10px;
+    color: #149FC8;  
+    text-align: center;
+}
+.female-gender-batch{
+  background-color: #f8ddda;
+  padding: 5px 15px 5px 15px;
+  border-radius: 10px;
+  color: #EA6354; 
+  text-align: center;
+}
+

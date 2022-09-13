@@ -158,6 +158,7 @@ export default function CreateSchedule() {
             <div
               className="col-lg-4 col-md-8 col-sm-12 p-3 offset-md-1 text-center"
             >
+              <label htmlFor="photo">
               <div className="imageUploadingBox">
                 <div className="row text-center">
                   <CDBIcon icon="upload" className="imageuploadericon" />
@@ -168,12 +169,10 @@ export default function CreateSchedule() {
                     Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word,
                     PPT
                   </p>
-                  <div>
-                    {" "}
-                    <input type="file" />
-                  </div>
                 </div>
               </div>
+              </label>
+              <input type="file" id="photo" className="d-none"/>
               <button className="btn btn-success" style={{ width: "50%" }}>
                 Add
               </button>
