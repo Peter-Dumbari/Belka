@@ -5,7 +5,6 @@ import Calendar from "react-calendar";
 import { Link } from "react-router-dom";
 import Pagefooter from "../Components/Pagefooter";
 
-
 export default function EventList() {
   const [value, onChange] = useState(new Date());
   const [currentPage, setCurrentPage] = useState(1);
@@ -93,7 +92,12 @@ export default function EventList() {
       value: "3",
     },
   ]);
-  const currentPosts = tableData.slice(indexOfFirstPost, indexOfLastPost);
+  const [dataSource, setDataSource] = useState(tableData)
+
+  const handleDelete = (id) => {
+    setDataSource(dataSource.filter((items) => items.id !== id));
+  };
+  const currentPosts = dataSource.slice(indexOfFirstPost, indexOfLastPost);
 
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -106,17 +110,32 @@ export default function EventList() {
       setminpageNumberLimit(minpageNumberLimit + pageNumberLimit);
     }
   };
+
   const PreviousPage = () => {
     setCurrentPage(currentPage - 1);
+    if ((currentPage - 1) % pageNumberLimit == 0) {
+      setmaxpageNumberLimit(maxpageNumberLimit - pageNumberLimit);
+      setminpageNumberLimit(minpageNumberLimit - pageNumberLimit);
+    }
   };
 
+  const handleChange = (e) =>{
+    const {name, checked} = e.target;
+    if(name === "allSelect"){
+      let tempUser = dataSource.map(items =>{return{...items, isChecked: checked}})
+      setDataSource(tempUser)
+    }else{
+      let tempUser = dataSource.map(items=>items.location === name?{...items, isChecked: checked}: items);
+    setDataSource(tempUser)
+    }
+  }
 
   return (
     <>
       <Sidebar />
-      <body
+      <body 
         className="container-fluid scheduleevent"
-        style={{ backgroundColor: "#f1f1f2" }}>
+        style={{ backgroundColor: "#f1f1f2", height: "100vh"}}>
         <div className="d-flex eventlistcontainer">
           <div className="me-auto p-2 eventllist">
             <h3 style={{ fontFamily: "Poppins" }}>Schedule/Program List</h3>
@@ -205,11 +224,11 @@ export default function EventList() {
             className=" col-11 col-lg-8  col-md-12 mt-2 p-3 bg-light m-3"
             style={{ borderRadius: "10px" }}>
             <div className="table-responsive">
-            <table className="table table-striped table-hover eventlisttable">
+              <table className="table table-striped table-hover eventlisttable">
                 <thead style={{ color: "#484848" }}>
                   <tr>
                     <th>
-                      <input type="checkbox" name="" id="" />
+                      <input type="checkbox" name="allSelect" id="" onChange={handleChange}/>
                     </th>
                     <th>
                       <div className="d-line-flex">
@@ -244,7 +263,7 @@ export default function EventList() {
                   {currentPosts.map((items) => (
                     <tr key={items.id}>
                       <td>
-                        <input type="checkbox" name="" id="" />
+                        <input type="checkbox" name={items.location} id="" onChange={handleChange} checked={items?.isChecked || false}/>
                       </td>
                       <td>
                         <div me="d-line-flex">
@@ -288,6 +307,9 @@ export default function EventList() {
                               borderRadius: "10px",
                             }}
                           />
+                          <span onClick={() =>
+                                            handleDelete(items.id)
+                                          }>
                           <CDBIcon
                             icon="trash"
                             style={{
@@ -296,7 +318,8 @@ export default function EventList() {
                               borderRadius: "10px",
                               backgroundColor: "#e6c5c7",
                             }}
-                          />
+                            />
+                          </span>
                         </div>
                       </td>
                     </tr>
@@ -308,9 +331,9 @@ export default function EventList() {
         </div>
         <Pagefooter
           postPerPage={postsPerPage}
-          minpageNumberLimit={minpageNumberLimit}
-          maxpageNumberLimit={maxpageNumberLimit}
-          totalPosts={tableData.length}
+          minPageNumberLimit={minpageNumberLimit}
+          maxPageNumberLimit={maxpageNumberLimit}
+          totalPosts={dataSource.length}
           paginate={paginate}
           NextPage={NextPage}
           PreviousPage={PreviousPage}

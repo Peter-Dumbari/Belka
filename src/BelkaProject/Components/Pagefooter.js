@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CDBIcon } from "cdbreact";
 
 export default function Pagefooter({
@@ -16,6 +16,11 @@ export default function Pagefooter({
   for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
     pageNumber.push(i);
   }
+
+  useEffect(() => {
+    console.warn();
+  });
+
   return (
     <div className="row pagination-container">
       <div className="col-sm-8 col-md-8 col-lg-7 offset-lg-1">
@@ -27,30 +32,46 @@ export default function Pagefooter({
         <nav aria-label="Page navigation example">
           <ul className="pagination justify-content-center">
             <li className="page-item">
-              <a
+              <button
                 className="page-link"
-                onClick={(pageNumber) => PreviousPage(pageNumber)}>
+                onClick={(pageNumber) => PreviousPage(pageNumber)}
+                disabled={currentPage == pageNumber[0] ? true : false}>
                 <CDBIcon icon="angle-left" />
-              </a>
+              </button>
             </li>
-            {pageNumber.map((number) => (
-              <li className="page-item" key={number}>
-                <a
-                  className={
-                    currentPage === number ? "page-link active" : "page-link"
-                  }
-                  onClick={() => paginate(number)}
-                  href="#">
-                  {number}
-                </a>
-              </li>
-            ))}
+            {pageNumber.map((number) => {
+              if (
+                number < maxPageNumberLimit + 1 &&
+                number > minPageNumberLimit
+              )
+                return (
+                  <li className="page-item" key={number}>
+                    <a
+                      className={
+                        currentPage === number
+                          ? "page-link active"
+                          : "page-link"
+                      }
+                      onClick={() => paginate(number)}>
+                      {number}
+                    </a>
+                  </li>
+                );
+              else {
+                return null;
+              }
+            })}
             <li className="page-item">
-              <a
+              <button
                 className="page-link"
-                onClick={(pageNumber) => NextPage(pageNumber)}>
+                onClick={(pageNumber) => NextPage(pageNumber)}
+                disabled={
+                  currentPage == pageNumber[pageNumber.length - 1]
+                    ? true
+                    : false
+                }>
                 <CDBIcon icon="angle-right" />
-              </a>
+              </button>
             </li>
           </ul>
         </nav>
