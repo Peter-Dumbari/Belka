@@ -129,13 +129,12 @@ export default function EventList() {
     setDataSource(tempUser)
     }
   }
-
   return (
     <>
       <Sidebar />
       <body 
         className="container-fluid scheduleevent"
-        style={{ backgroundColor: "#f1f1f2", height: "100vh"}}>
+        style={{ backgroundColor: "#f1f1f2", height: "auto"}}>
         <div className="d-flex eventlistcontainer">
           <div className="me-auto p-2 eventllist">
             <h3 style={{ fontFamily: "Poppins" }}>Schedule/Program List</h3>
